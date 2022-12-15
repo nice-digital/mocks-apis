@@ -1,15 +1,14 @@
-FROM node:12
+FROM node:14-alpine
 
 WORKDIR /app
 
-COPY package.json /app
-COPY package-lock.json /app
+COPY ["package.json", "package-lock.json*", "./"]
 
-RUN npm ci
+RUN npm i
 
-COPY . /app
+COPY . .
 
-# Use default ElasticSearch port
-EXPOSE 9200
+CMD [ "node",  "index.js" ]
 
-CMD [ "npm", "start" ]
+EXPOSE 3000
+
