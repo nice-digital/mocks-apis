@@ -5,7 +5,7 @@ const path = require("path"),
 	jsonpath = require("jsonpath");
 
 const resultsDirectory = path.join(__dirname, "data", "results"),
-	autocompleteDirectory = path.join(__dirname, "data", "autocomplete");
+	typeAheadDirectory = path.join(__dirname, "data", "autocomplete");
 
 const removeJsonFileExtension = (fileName) => path.basename(fileName, ".json");
 
@@ -30,7 +30,7 @@ app.use(async (req, res, next) => {
 
 	res.typeAhead = async (fileName, next) => {
 		console.info(`TypeAhead request for ${fileName}`);
-		sendResponse(fileName, autocompleteDirectory, () => res.status(200).send([]));
+		sendResponse(fileName, typeAheadDirectory, () => res.status(200).send([]));
 	};
 
 	next();
