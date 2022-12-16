@@ -9,7 +9,7 @@ const resultsDirectory = path.join(__dirname, "data", "results"),
 const removeJsonFileExtension = (fileName) => path.basename(fileName, ".json");
 
 const app = express();
-const port = 9200;
+const port = process.env.PORT || 3000;
 
 // Allow us to parse request bodies as JSON: https://stackoverflow.com/a/49943829/486434
 app.use(express.json());
