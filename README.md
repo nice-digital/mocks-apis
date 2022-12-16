@@ -1,32 +1,30 @@
-# Fake CKS ElasticSearch
+# Mock search api
 
-> A fake ElasticSearch instance with specific fake search data for use in automated tests.
+> Gives mock hard coded responses to certain search api endpoints
 
-## What is it?
+## Getting started
 
-An ExpressJS Node app that fakes out ElasticSearch. It serves pre-defined static JSON files in response to specific, [supported queries](#supported-queries). These responses are taken from ElasticSearch, and the app runs on port 9200. This means the CKS web app (and Search Client) doesn't know it's not an _actual_ Elastic instance.
+- `npm i`
+- `npm start` (if you need to a specify port set your env before running eg. `PORT=3000 npm start`)
 
-## Rationale
-
-- It allows us to write browser-based, functional tests against search scenarios.
-- We don't need to spin up a heavy, full ElasticSearch instance in Docker for the automated tests.
-- We don't need to be able to connect to a real ElasticSearch instance outside of our tests.
-- We're in control of the fixed data, so not at the risk of failed tests due to external data changing.
-
-## Supported queries
-
-**Only** the following queries are supported. Using other query terms will result in errors:
-
-- _cancer_
-- _paracetmol_. Notice the intentional spelling mistake, for testing spelling correction.
-- typeahead search for _diab_
-- typeahead search for _ast_
-- TODO: other scenarios and paging
-
+ 
 ## Usage
 
-Run `npm ci` to install dependencies. Run `npm start` to run the app. Note: this runs on port 9200 so you won't be able to run a _real_ ElasticSearch on your machine at the same time.
+The initial intended use for these mock responses is for any consuming application of the search service to be able to have a stable response for functional testing.
 
-## Docker
+This folder comes with a Dockerfile so that it can be built straight from the git url.  For example:
 
-The app comes with a Dockerfile that handles everything for you - installing dependencies and running the app. It's included within the main [functional tests](../) docker-compose network by default, so you don't need to do anything.
+`docker build https://github.com/nice-digital/mocks-apis.git#main:search-apis -t mock-search-api` should build the image `mock-search-api`. 
+
+To run the container:
+
+`docker run --publish 3000:3000 --name=search-api -d mock-search-api`
+
+Now you should be able to go to any of these links:
+
+http://localhost:3000/api/typeahead?q=re&index=cks (typeahead no results)
+http://localhost:3000/api/typeahead?q=ast&index=cks (typeahead results)
+http://localhost:3000/api/search?q=asdfg&index=cks (search no results)
+http://localhost:3000/api/search?q=cancer&index=cks (search results)
+
+
