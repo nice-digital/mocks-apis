@@ -20,7 +20,6 @@ describe("Search api", () => {
     })
 })
 
-
 describe("Typeahead api", () => {
     it("search for 'ast' should return data", async () => {
         const res = await request.get('/api/typeahead?q=ast&index=cks');
@@ -44,6 +43,13 @@ describe("Typeahead api", () => {
 describe("Incorrect url", () => {
     it("should return 404 response", async () => {
         const res = await request.get('/api/doesnotexist?q=ast&index=cks');
+        expect(res.status).toBe(404);
+    })
+})
+
+describe("Specified index does not exist", () => {
+    it("should return 404 response", async () => {
+        const res = await request.get('/api/search?q=ast&index=doesnotexist');
         expect(res.status).toBe(404);
     })
 })

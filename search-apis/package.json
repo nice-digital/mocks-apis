@@ -1,7 +1,7 @@
 {
-  "name": "@nice-digital/cks-fake-elastic",
+  "name": "@nice-digital/mock-search-api",
   "version": "1.0.0",
-  "description": "Fake ElasticSearch instance for CKS automated tests",
+  "description": "Responds with mock data for the search api endpoints",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -15,7 +15,7 @@
     "David Wong"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/nice-digital/cks-gatsby/functional-tests/fake-elastic/#readme",
+  "homepage": "https://github.com/nice-digital/mocks-apis/blob/main/search-apis/README.md",
   "dependencies": {
     "express": "^4.17.1",
     "fs-extra": "^9.0.1",

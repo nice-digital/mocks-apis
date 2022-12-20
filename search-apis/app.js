@@ -9,6 +9,7 @@ const resultsDirectory = path.join(__dirname, "data", "results"),
 
 const removeJsonFileExtension = (fileName) => path.basename(fileName, ".json");
 
+const possibleIndexes = ['cks'];
 const app = express();
 
 // Allow us to parse request bodies as JSON: https://stackoverflow.com/a/49943829/486434
@@ -35,6 +36,12 @@ app.use(async (req, res, next) => {
 
 	next();
 });
+app.use(async (req, res, next) => {
+	const index = req.query?.index;
+	possibleIndexes.find(i => i ===index) ?
+		next() :
+		res.status(404).send(`Specified index - ${index} not found.`);
+})
 
 app.get("/api/search", async(req, res, next) => {
 	const queryTerm = req.query?.q;
