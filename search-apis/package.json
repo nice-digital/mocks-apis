@@ -1,0 +1,29 @@
+{
+  "name": "@nice-digital/mock-search-api",
+  "version": "1.0.0",
+  "description": "Responds with mock data for the search api endpoints",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "dev": "nodemon index.js"
+  },
+  "author": "NICE Digital (https://www.nice.org.uk/digital)",
+  "contributors": [
+    "NICE Digital Services (https://www.nice.org.uk/digital)",
+    "David Wong"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nice-digital/mocks-apis/blob/main/search-apis/README.md",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "jsonpath": "^1.0.2"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
+  }
+}

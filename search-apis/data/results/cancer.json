@@ -1,0 +1,1262 @@
+{
+  "debug":{
+     "rawResponse":"Valid NEST response built from a successful low level call on POST: /cks/document/_search?typed_keys=true\r\n# Audit trail of this API call:\r\n - [1] HealthyResponse: Node: http://live-elastic.nice.org.uk:9200/ Took: 00:00:00.0169656\r\n# Request:\r\n{\"from\":0,\"size\":10,\"highlight\":{\"pre_tags\":[\"<mark>\"],\"post_tags\":[\"</mark>\"],\"fields\":{\"content\":{\"fragment_size\":150,\"no_match_size\":150,\"type\":\"fvh\",\"matched_fields\":[\"content\",\"content.plain\"]},\"title\":{\"pre_tags\":[\"<b>\"],\"post_tags\":[\"</b>\"],\"fragment_size\":300,\"number_of_fragments\":0,\"type\":\"fvh\",\"matched_fields\":[\"title\",\"title.plain\"]}}},\"_source\":{\"excludes\":[\"content\"]},\"aggs\":{\"unique_count\":{\"cardinality\":{\"field\":\"clusterid\"}}},\"query\":{\"function_score\":{\"query\":{\"function_score\":{\"query\":{\"bool\":{\"should\":[{\"bool\":{\"should\":[{\"bool\":{\"must\":[{\"query_string\":{\"type\":\"best_fields\",\"query\":\"CANCER\",\"default_operator\":\"and\",\"analyzer\":\"fulltext_query\",\"analyze_wildcard\":true,\"fields\":[\"content^1\",\"title^1\",\"metadescription^0\",\"keywords^1\"],\"tie_breaker\":1.0,\"quote_field_suffix\":\".plain\",\"auto_generate_synonyms_phrase_query\":false}}]}},{\"bool\":{\"must\":[{\"query_string\":{\"type\":\"best_fields\",\"query\":\"CANCER\",\"default_operator\":\"and\",\"analyzer\":\"fulltext_no_synonyms\",\"analyze_wildcard\":true,\"fields\":[\"content.plain^1\",\"title.plain^1\",\"metadescription.plain^0\",\"keywords.plain^1\"],\"tie_breaker\":1.0,\"quote_field_suffix\":\".plain\",\"auto_generate_synonyms_phrase_query\":false}}]}},{\"bool\":{\"must\":[{\"multi_match\":{\"type\":\"phrase\",\"query\":\"CANCER\",\"analyzer\":\"standard\",\"fields\":[\"title.plain\",\"content.plain\",\"metadescription.plain\"]}}]}}]}}]}},\"functions\":[{\"field_value_factor\":{\"field\":\"boostvalue\",\"factor\":0.01}},{\"gauss\":{\"freshness_date\":{\"scale\":\"28d\",\"offset\":\"28d\"}}}],\"boost_mode\":\"multiply\"}},\"functions\":[{\"weight\":1.0}],\"score_mode\":\"multiply\"}}}\r\n# Response:\r\n{\"took\":13,\"timed_out\":false,\"_shards\":{\"total\":1,\"successful\":1,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":492,\"max_score\":23.128325,\"hits\":[{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2254392\",\"_score\":23.128325,\"_source\":{\"altsourceshort\":[\"CKS\"],\"autocomplete\":\"Prostate cancer\",\"metadescription\":\"Prostate cancer is amalignant tumour of the prostate. Almost all cancers of the prostate (95%) are adenocarcinomas.\",\"accredited\":\"False\",\"clusterid\":-2254392,\"title\":\"Prostate cancer\",\"url\":\"https://cks.nice.org.uk/topics/prostate-cancer/\",\"landing_url\":\"https://cks.nice.org.uk/topics/prostate-cancer/\",\"typeAheadLink\":\"/topics/prostate-cancer/\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"typeAheadType\":\"topic\",\"source_name\":\"CKS\"},\"highlight\":{\"title\":[\"Prostate <b>cancer</b>\"],\"content\":[\"Prostate <mark>cancer</mark> is a  malignant tumour of the prostate. Almost all <mark>cancers</mark> of the prostate (95%) are adenocarcinomas. Prostate <mark>cancer</mark> is multifocal â\",\"differ greatly in growth rate and ability to metastasize. Most prostate <mark>cancers</mark> are indolent and grow slowly  â a minority are aggressive and invade local\",\" Localized prostate <mark>cancer</mark> usually develops in the outer zone of the prostate, where it seldom causes symptoms. Locally advanced prostate <mark>cancer</mark> extends beyond\",\"prostate <mark>cancer</mark> most frequently affects the bones, where it causes pain and fragility fractures.     Prostate <mark>cancer</mark> is the most common type of <mark>cancer</mark> in men\",\"second most common cause of <mark>cancer</mark> death in males in the UK (after lung <mark>cancer</mark>).    Risk factors for developing prostate <mark>cancer</mark> include:Increasing age. Black\"]}},{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2254361\",\"_score\":23.084599,\"_source\":{\"altsourceshort\":[\"CKS\"],\"autocomplete\":\"Ovarian cancer\",\"metadescription\":\"The lifetime risk of a woman being diagnosed with ovarian cancer is 1 in 52.The risk of ovarian cancer is increased by:Increasing age.\",\"accredited\":\"False\",\"clusterid\":-2254361,\"title\":\"Ovarian cancer\",\"url\":\"https://cks.nice.org.uk/topics/ovarian-cancer/\",\"landing_url\":\"https://cks.nice.org.uk/topics/ovarian-cancer/\",\"typeAheadLink\":\"/topics/ovarian-cancer/\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"typeAheadType\":\"topic\",\"source_name\":\"CKS\"},\"highlight\":{\"title\":[\"Ovarian <b>cancer</b>\"],\"content\":[\"Ovarian <mark>cancer</mark> is <mark>cancer</mark> which  arises  from the ovary.Epithelial <mark>cancers</mark> account for approximately 90% of primary ovarian <mark>cancers</mark> and include  serous\",\"cell, and squamous  tumours. Non-epithelial <mark>cancers</mark>  account for approximately 10% of primary ovarian <mark>cancers</mark> and include germ cell tumours, ovarian carcinosarcoma\",\"the ovary, most notably from <mark>cancers</mark> of the endometrium, breast, gastrointestinal tract, and cervix (rare). Ovarian <mark>cancer</mark> may spread to intraperitoneal\",\"ovarian <mark>cancer</mark> is about  1 in 52. The risk of ovarian <mark>cancer</mark> is increased by factors such as increasing age, family history of ovarian or breast <mark>cancer</mark>, gene\",\"gene mutation, and endometriosis. The risk of ovarian <mark>cancer</mark> is reduced by factors such as an increasing number  of pregnancies, breastfeeding, and the use\"]}},{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2255992\",\"_score\":22.027023,\"_source\":{\"altsourceshort\":[\"CKS\"],\"keywords\":\"diagnosis;diagnoses\",\"metadescription\":\"Suspect ovarian cancer and carry out tests : In any woman (particularly if over 50 years of age)  if any of the following symptoms are persistent or frequent (particularly...\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2255992,\"title\":\"Ovarian cancer:  When should I suspect ovarian cancer?\",\"url\":\"https://cks.nice.org.uk/topics/ovarian-cancer/diagnosis/when-to-suspect-ovarian-cancer/\",\"source_name\":\"CKS subsections\",\"landing_url\":\"https://cks.nice.org.uk/topics/ovarian-cancer/diagnosis/when-to-suspect-ovarian-cancer/\"},\"highlight\":{\"title\":[\"Ovarian <b>cancer</b>:  When should I suspect ovarian <b>cancer</b>?\"],\"content\":[\"When should I suspect ovarian <mark>cancer</mark>? Suspect ovarian <mark>cancer</mark> and carry out tests : In any woman (particularly if over 50 years of age)  if any of the following\",\"bowel syndrome for more information.     Consider the possibility of ovarian <mark>cancer</mark> and consider carrying out tests in any woman who reports any of the following\",\" Malaise or fatigue. Change in bowel habit.   Other symptoms of ovarian <mark>cancer</mark> that may be present include: Abnormal or postmenopausal bleeding. Gastrointestinal\",\"recommendation    Symptoms associated with ovarian <mark>cancer</mark> Recommendations on when to suspect ovarian <mark>cancer</mark> are based on evidence identified by the  National\",\"the guideline  Ovarian <mark>cancer</mark>: the recognition and initial management of ovarian <mark>cancer</mark>   [National Collaborating Centre for <mark>Cancer</mark>, 2011 ].A systematic\"]}},{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2254743\",\"_score\":21.620869,\"_source\":{\"altsourceshort\":[\"CKS\"],\"keywords\":\"managing;management\",\"metadescription\":\"Take a family history of breast cancer when: A person has concerns about their family history of breast cancer.\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2254743,\"title\":\"Breast cancer - managing FH:  Scenario: Breast cancer - managing family history\",\"url\":\"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/management/breast-cancer-managing-fh/\",\"source_name\":\"CKS subsections\",\"landing_url\":\"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/management/breast-cancer-managing-fh/\"},\"highlight\":{\"title\":[\"Breast <b>cancer</b> - managing FH:  Scenario: Breast <b>cancer</b> - managing family history\"],\"content\":[\"Scenario: Breast <mark>cancer</mark> - managing family history From age 16 years onwards.  When and how should  I take a family history? Take a family history of breast\",\"breast <mark>cancer</mark> when: A person has concerns about their family history of breast <mark>cancer.</mark> A person has breast symptoms. It is clinically relevant, for example:In\",\"nephew, half-sister, and half-brother). Ask about:All <mark>cancer</mark> diagnoses (including breast <mark>cancer</mark>). People in whom a faulty gene   (such as BRCA1, BRCA2\",\"identified. Age at diagnosis. Presence of bilateral disease. Male breast <mark>cancer.</mark> Multiple cases in the family (particularly on one side). Jewish ancestry\",\"related early onset tumours, such as ovarian, pancreatic, and  prostate <mark>cancer</mark>, sarcoma, glioma, and adrenal carcinoma.       Basis for recommendation\"]}},{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2255994\",\"_score\":21.510656,\"_source\":{\"altsourceshort\":[\"CKS\"],\"keywords\":\"managing;management\",\"metadescription\":\"Carry out an abdominal and pelvic examination.\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2255994,\"title\":\"Ovarian cancer:  Scenario: Managing a womanwith suspected ovarian cancer\",\"url\":\"https://cks.nice.org.uk/topics/ovarian-cancer/management/managing-a-woman-with-suspected-ovarian-cancer/\",\"source_name\":\"CKS subsections\",\"landing_url\":\"https://cks.nice.org.uk/topics/ovarian-cancer/management/managing-a-woman-with-suspected-ovarian-cancer/\"},\"highlight\":{\"title\":[\"Ovarian <b>cancer</b>:  Scenario: Managing a womanwith suspected ovarian <b>cancer</b>\"],\"content\":[\" with suspected ovarian <mark>cancer</mark> From age 18 years onwards (Female).  How should I manage a woman with suspected ovarian <mark>cancer</mark>? Carry out an abdominal and\",\"scan of the abdomen and pelvis. If the ultrasound is suggestive of ovarian <mark>cancer</mark>, refer the woman urgently to gynaecology  (to be seen within 2 weeks) for\",\"(NICE) guideline  Ovarian <mark>cancer</mark>: the recognition and initial management of ovarian <mark>cancer</mark>   [National Collaborating Centre for <mark>Cancer</mark>, 2011 ]. Abdominal and\",\"from symptomatic women in primary care, where the prevalence of ovarian <mark>cancer</mark> is lower. However, sensitivity analysis showed that changing the prevalence\",\"in the detection of ovarian <mark>cancer</mark> combined Doppler and morphometric ultrasound had  [National Collaborating Centre for <mark>Cancer</mark>, 2011 ]:A sensitivity that\"]}},{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2254745\",\"_score\":21.269283,\"_source\":{\"altsourceshort\":[\"CKS\"],\"keywords\":\"managing;management\",\"metadescription\":\"The terms used in the National Institute for Health and Care Excellence (NICE) guideline Suspected cancer: recognition and referral are as follows:Immediate: an...\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2254745,\"title\":\"Breast cancer - recognition and referral:  Scenario: Referral for breast cancer\",\"url\":\"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/management/referral-for-breast-cancer/\",\"source_name\":\"CKS subsections\",\"landing_url\":\"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/management/referral-for-breast-cancer/\"},\"highlight\":{\"title\":[\"Breast <b>cancer</b> - recognition and referral:  Scenario: Referral for breast <b>cancer</b>\"],\"content\":[\"Scenario: Referral for breast <mark>cancer</mark> From birth onwards.  Referral timelines The terms used in the National Institute for Health and Care Excellence (NICE)\",\"(NICE) guideline Suspected <mark>cancer</mark>: recognition and referral are as follows:Immediate: an acute admission or referral occurring within a few hours, or even\",\"considered very urgent or urgent. Suspected <mark>cancer</mark> pathway referral: the patient is seen within the national target for <mark>cancer</mark> referrals.     Basis for recommendation\",\"guideline  Suspected <mark>cancer</mark>: recognition and r eferral   [NICE, 2015 ].     When should I refer a person with suspected breast <mark>cancer</mark>? Refer people using\",\"using a suspected <mark>cancer</mark> pathway referral   (for an appointment within 2 weeks) for breast <mark>cancer</mark> if:They are aged 30 years and over and have an unexplained\"]}},{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2254744\",\"_score\":21.236925,\"_source\":{\"altsourceshort\":[\"CKS\"],\"keywords\":\"diagnosis;diagnoses\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2254744,\"title\":\"Breast cancer - recognition and referral:  Symptoms suggestive of breast cancer\",\"url\":\"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/diagnosis/symptoms-suggestive-of-breast-cancer/\",\"source_name\":\"CKS subsections\",\"landing_url\":\"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/diagnosis/symptoms-suggestive-of-breast-cancer/\"},\"highlight\":{\"title\":[\"Breast <b>cancer</b> - recognition and referral:  Symptoms suggestive of breast <b>cancer</b>\"],\"content\":[\"Symptoms suggestive of breast <mark>cancer</mark> Table 2. Symptoms suggestive of breast <mark>cancer.</mark> Symptom Possible <mark>cancer</mark> Referral recommendation   Axillary lump (unexplained)\",\"(unexplained), age 30 years and over Breast <mark>cancer</mark> Consider a suspected <mark>cancer</mark> pathway referral (for an appointment within 2  weeks)  Breast lump (unexplained)\",\"(unexplained) with or without pain, age 30 years and over Breast <mark>cancer</mark> Refer people using a suspected <mark>cancer</mark> pathway referral (for an appointment within 2  weeks)\",\"Breast lump (unexplained) with or without pain, under age 30 years Breast <mark>cancer</mark> Consider  non-urgent  referral  Nipple changes of concern (in one nipple\",\"Breast <mark>cancer</mark> Refer people using a suspected <mark>cancer</mark> pathway referral (for an appointment within 2  weeks)  Skin changes that suggest breast <mark>cancer</mark> Breast\"]}},{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2254156\",\"_score\":21.168915,\"_source\":{\"altsourceshort\":[\"CKS\"],\"autocomplete\":\"Cervical cancer and HPV\",\"metadescription\":\"Types of cervical cancer include:Squamous cell carcinoma and Cervical adenocarcinoma\",\"accredited\":\"False\",\"clusterid\":-2254156,\"title\":\"Cervical cancer and HPV\",\"url\":\"https://cks.nice.org.uk/topics/cervical-cancer-hpv/\",\"landing_url\":\"https://cks.nice.org.uk/topics/cervical-cancer-hpv/\",\"typeAheadLink\":\"/topics/cervical-cancer-hpv/\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"typeAheadType\":\"topic\",\"source_name\":\"CKS\"},\"highlight\":{\"title\":[\"Cervical <b>cancer</b> and HPV\"],\"content\":[\"Almost all cases of cervical <mark>cancer</mark> originate from the ecto- or endocervical mucosa in the cervical 'transformation zone'.Low-grade dysplasia (cervical\",\"regresses, but it can progress to high-grade dysplasia (CIN2 or 3). Cervical <mark>cancer</mark> occurs when high-grade dysplastic lesions extend beyond the basement membrane\",\"two commonest types of cervical <mark>cancer</mark> are squamous cell carcinoma and adenocarcinoma.   The main cause of cervical <mark>cancer</mark> is persistent infection with one\",\"transmitted through sexual intercourse.HPV is detected in 99% of cervical <mark>cancer</mark>, and the high-risk oncogenic subtypes HPV 16 and 18 account for at least\",\"precancerous lesions is 1â10 years.   Risk factors for development of cervical <mark>cancer</mark> are increased exposure to HPV infection (such as early age of first intercourse)\"]}},{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2254137\",\"_score\":21.121254,\"_source\":{\"altsourceshort\":[\"CKS\"],\"autocomplete\":\"Breast cancer - managing FH\",\"metadescription\":\"A family history of breast cancer is one of the strongest risk factors for developing breast cancer, increasing with the number of affected relatives.\",\"accredited\":\"False\",\"clusterid\":-2254137,\"title\":\"Breast cancer - managing FH\",\"url\":\"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/\",\"landing_url\":\"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/\",\"typeAheadLink\":\"/topics/breast-cancer-managing-fh/\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"typeAheadType\":\"topic\",\"source_name\":\"CKS\"},\"highlight\":{\"title\":[\"Breast <b>cancer</b> - managing FH\"],\"content\":[\"A family history of breast <mark>cancer</mark> is a  strong  risk factor  for developing the disease. The  risk increases with the number of relatives affected and\",\"age of diagnosis the greater the risk), and is  modified by  other breast <mark>cancer</mark> risk factors,  including age at menopause, parity, oral contraception, hormone\",\"(HRT), and breastfeeding.   People without a personal history of breast <mark>cancer</mark> can be managed in primary care if they have only one first-degree relative\",\"with breast <mark>cancer</mark> when over 40 years of age, provided that none of the following are present in the family history:Bilateral breast <mark>cancer.</mark> Male breast\",\"breast <mark>cancer.</mark> Ovarian <mark>cancer.</mark> Jewish ancestry. Sarcoma in a relative younger than 45 years of age. Glioma or childhood adrenal cortical carcinomas. Complicated\"]}},{\"_index\":\"cks_2022_05_04\",\"_type\":\"document\",\"_id\":\"2256198\",\"_score\":20.83542,\"_source\":{\"altsourceshort\":[\"CKS\"],\"keywords\":\"managing;management\",\"metadescription\":\"Treatment for prostate cancer will be initiated and managed in secondary care.\",\"boostvalue\":100,\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2256198,\"title\":\"Prostate cancer:  Scenario: Management\",\"url\":\"https://cks.nice.org.uk/topics/prostate-cancer/management/management/\",\"source_name\":\"CKS subsections\",\"landing_url\":\"https://cks.nice.org.uk/topics/prostate-cancer/management/management/\"},\"highlight\":{\"title\":[\"Prostate <b>cancer</b>:  Scenario: Management\"],\"content\":[\"Management From age 30 years onwards (Male).  How is prostate <mark>cancer</mark> managed? Treatment for prostate <mark>cancer</mark> will be initiated and managed in secondary care. Follow\",\"locally advanced prostate <mark>cancer</mark>, see the National Institute for Health and Care Excellence (NICE) guideline  Prostate <mark>cancer</mark>: diagnosis and management\",\"decision aid   is endorsed by NICE and supports the NICE guideline on prostate <mark>cancer.</mark> Produced by the University of Cambridge Academic Urology Group, it compares\",\"prostate <mark>cancer.</mark>     Offer men with prostate <mark>cancer</mark> advice on how to access information and support from websites, local and national <mark>cancer</mark> information\",\"information services, and from <mark>cancer</mark> support groups,  including:   <mark>Cancer</mark> Research UK  (www.cancerresearchuk.org ). Prostate <mark>Cancer</mark> UK  (www.prostatecanceruk.org\"]}}]},\"aggregations\":{\"cardinality#unique_count\":{\"value\":492}}}\r\n"
+  },
+  "failed":false,
+  "errorMessage":null,
+  "parentResultUrl":null,
+  "resultCount":492,
+  "rolledUpCount":492,
+  "unrolledCount":492,
+  "documents":[
+     {
+        "id":"2254392",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":"Prostate cancer is amalignant tumour of the prostate. Almost all cancers of the prostate (95%) are adenocarcinomas.",
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2254392,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/prostate-cancer/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/prostate-cancer/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS",
+        "sourceUrl":"https://cks.nice.org.uk/topics/prostate-cancer/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"Prostate cancer is amalignant tumour of the prostate. Almost all cancers of the prostate (95%) are adenocarcinomas.",
+        "title":"Prostate <b>cancer</b>",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":23.128325,
+        "titleParts":[
+           "Prostate <b>cancer</b>"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/prostate-cancer/",
+        "debug":null
+     },
+     {
+        "id":"2254361",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":"The lifetime risk of a woman being diagnosed with ovarian cancer is 1 in 52.The risk of ovarian cancer is increased by:Increasing age.",
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2254361,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/ovarian-cancer/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/ovarian-cancer/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS",
+        "sourceUrl":"https://cks.nice.org.uk/topics/ovarian-cancer/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"The lifetime risk of a woman being diagnosed with ovarian cancer is 1 in 52.The risk of ovarian cancer is increased by:Increasing age.",
+        "title":"Ovarian <b>cancer</b>",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":23.084599,
+        "titleParts":[
+           "Ovarian <b>cancer</b>"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/ovarian-cancer/",
+        "debug":null
+     },
+     {
+        "id":"2255992",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":"Suspect ovarian cancer and carry out tests : In any woman (particularly if over 50 years of age)  if any of the following symptoms are persistent or frequent (particularly...",
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2255992,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/ovarian-cancer/diagnosis/when-to-suspect-ovarian-cancer/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/ovarian-cancer/diagnosis/when-to-suspect-ovarian-cancer/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS subsections",
+        "sourceUrl":"https://cks.nice.org.uk/topics/ovarian-cancer/diagnosis/when-to-suspect-ovarian-cancer/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"Suspect ovarian cancer and carry out tests : In any woman (particularly if over 50 years of age)  if any of the following symptoms are persistent or frequent (particularly...",
+        "title":"Ovarian <b>cancer</b>:  When should I suspect ovarian <b>cancer</b>?",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":22.027023,
+        "titleParts":[
+           "Ovarian <b>cancer</b>:  When should I suspect ovarian <b>cancer</b>?"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/ovarian-cancer/diagnosis/when-to-suspect-ovarian-cancer/",
+        "debug":null
+     },
+     {
+        "id":"2254743",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":"Take a family history of breast cancer when: A person has concerns about their family history of breast cancer.",
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2254743,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/management/breast-cancer-managing-fh/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/breast-cancer-managing-fh/management/breast-cancer-managing-fh/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS subsections",
+        "sourceUrl":"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/management/breast-cancer-managing-fh/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"Take a family history of breast cancer when: A person has concerns about their family history of breast cancer.",
+        "title":"Breast <b>cancer</b> - managing FH:  Scenario: Breast <b>cancer</b> - managing family history",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":21.620869,
+        "titleParts":[
+           "FH",
+           "ast <b>cancer</b> - managing FH:  Scenario: Breast <b>cancer</b> - managing family history"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/management/breast-cancer-managing-fh/",
+        "debug":null
+     },
+     {
+        "id":"2255994",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":"Carry out an abdominal and pelvic examination.",
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2255994,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/ovarian-cancer/management/managing-a-woman-with-suspected-ovarian-cancer/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/ovarian-cancer/management/managing-a-woman-with-suspected-ovarian-cancer/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS subsections",
+        "sourceUrl":"https://cks.nice.org.uk/topics/ovarian-cancer/management/managing-a-woman-with-suspected-ovarian-cancer/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"Carry out an abdominal and pelvic examination.",
+        "title":"Ovarian <b>cancer</b>:  Scenario: Managing a womanwith suspected ovarian <b>cancer</b>",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":21.510656,
+        "titleParts":[
+           "Scenario",
+           "b>cancer</b>:  Scenario: Managing a womanwith suspected ovarian <b>cancer</b>"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/ovarian-cancer/management/managing-a-woman-with-suspected-ovarian-cancer/",
+        "debug":null
+     },
+     {
+        "id":"2254745",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":"The terms used in the National Institute for Health and Care Excellence (NICE) guideline Suspected cancer: recognition and referral are as follows:Immediate: an...",
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2254745,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/management/referral-for-breast-cancer/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/breast-cancer-recognition-referral/management/referral-for-breast-cancer/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS subsections",
+        "sourceUrl":"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/management/referral-for-breast-cancer/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"The terms used in the National Institute for Health and Care Excellence (NICE) guideline Suspected cancer: recognition and referral are as follows:Immediate: an...",
+        "title":"Breast <b>cancer</b> - recognition and referral:  Scenario: Referral for breast <b>cancer</b>",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":21.269283,
+        "titleParts":[
+           "referral",
+           ">cancer</b> - recognition and referral:  Scenario: Referral for breast <b>cancer</b>"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/management/referral-for-breast-cancer/",
+        "debug":null
+     },
+     {
+        "id":"2254744",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":null,
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2254744,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/diagnosis/symptoms-suggestive-of-breast-cancer/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/breast-cancer-recognition-referral/diagnosis/symptoms-suggestive-of-breast-cancer/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS subsections",
+        "sourceUrl":"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/diagnosis/symptoms-suggestive-of-breast-cancer/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"Symptoms suggestive of breast <mark>cancer</mark> Table 2. Symptoms suggestive of breast <mark>cancer.</mark> Symptom Possible <mark>cancer</mark>...",
+        "title":"Breast <b>cancer</b> - recognition and referral:  Symptoms suggestive of breast <b>cancer</b>",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":21.236925,
+        "titleParts":[
+           "referral",
+           ">cancer</b> - recognition and referral:  Symptoms suggestive of breast <b>cancer</b>"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/breast-cancer-recognition-referral/diagnosis/symptoms-suggestive-of-breast-cancer/",
+        "debug":null
+     },
+     {
+        "id":"2254156",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":"Types of cervical cancer include:Squamous cell carcinoma and Cervical adenocarcinoma",
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2254156,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/cervical-cancer-hpv/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/cervical-cancer-hpv/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS",
+        "sourceUrl":"https://cks.nice.org.uk/topics/cervical-cancer-hpv/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"Types of cervical cancer include:Squamous cell carcinoma and Cervical adenocarcinoma",
+        "title":"Cervical <b>cancer</b> and HPV",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":21.168915,
+        "titleParts":[
+           "Cervical <b>cancer</b> and HPV"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/cervical-cancer-hpv/",
+        "debug":null
+     },
+     {
+        "id":"2254137",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":"A family history of breast cancer is one of the strongest risk factors for developing breast cancer, increasing with the number of affected relatives.",
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2254137,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/breast-cancer-managing-fh/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS",
+        "sourceUrl":"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"A family history of breast cancer is one of the strongest risk factors for developing breast cancer, increasing with the number of affected relatives.",
+        "title":"Breast <b>cancer</b> - managing FH",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":21.121254,
+        "titleParts":[
+           "Breast <b>cancer</b> - managing FH"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/breast-cancer-managing-fh/",
+        "debug":null
+     },
+     {
+        "id":"2256198",
+        "tagsHigh":null,
+        "guidanceRef":null,
+        "xml":null,
+        "abstract":null,
+        "metaDescription":"Treatment for prostate cancer will be initiated and managed in secondary care.",
+        "accredited":false,
+        "alternativePublicationDate":null,
+        "altSourceNames":[
+           "CKS"
+        ],
+        "areaOfInterest":null,
+        "breadcrumbs":null,
+        "childDocumentCount":0,
+        "childDocuments":[
+           
+        ],
+        "childDocumentsUrl":null,
+        "clusterId":-2256198,
+        "evidenceTypes":[
+           
+        ],
+        "headings":null,
+        "impact":null,
+        "content":null,
+        "contentId":"https://cks.nice.org.uk/topics/prostate-cancer/management/management/",
+        "index":0,
+        "lessSuitableForPrescribing":false,
+        "niceDocType":[
+           
+        ],
+        "niceGuidanceType":[
+           
+        ],
+        "niceAdviceType":[
+           
+        ],
+        "niceResultType":null,
+        "parentPathTitle":null,
+        "parentPathUrl":null,
+        "parentPathWayUrl":null,
+        "pathAndQuery":"/topics/prostate-cancer/management/management/",
+        "primaryDrug":null,
+        "publicationDate":null,
+        "lastUpdated":null,
+        "expectedPublicationDate":null,
+        "consultationEndDate":null,
+        "consultationType":null,
+        "resourceType":[
+           
+        ],
+        "guidanceStatus":[
+           
+        ],
+        "publicationType":null,
+        "publisher":null,
+        "resourceCategory":null,
+        "relatedLinks":null,
+        "relatedLinkList":{
+           
+        },
+        "technologyType":null,
+        "topicSelectionDecision":null,
+        "subject":null,
+        "sourceName":"CKS subsections",
+        "sourceUrl":"https://cks.nice.org.uk/topics/prostate-cancer/management/management/",
+        "staticAbstract":null,
+        "subSectionLinks":null,
+        "subSections":[
+           
+        ],
+        "summaryUrl":null,
+        "tags":[
+           
+        ],
+        "teaser":"Treatment for prostate cancer will be initiated and managed in secondary care.",
+        "title":"Prostate <b>cancer</b>:  Scenario: Management",
+        "titleNoHtml":null,
+        "boostValue":100,
+        "score":20.83542,
+        "titleParts":[
+           "Scenario",
+           "<b>cancer</b>:  Scenario: Management"
+        ],
+        "ukmiSummaryUrl":null,
+        "url":"https://cks.nice.org.uk/topics/prostate-cancer/management/management/",
+        "debug":null
+     }
+  ],
+  "pagerLinks":{
+     "previous":null,
+     "first":null,
+     "pages":[
+        {
+           "title":"1",
+           "url":{
+              "af":null,
+              "am":null,
+              "arms":null,
+              "ci":null,
+              "cid":null,
+              "co":null,
+              "em":null,
+              "fc":null,
+              "fd":null,
+              "from":null,
+              "fs":null,
+              "fullUrl":"search?pa=1&q=cancer",
+              "fullUrlWithDefaultRoot":"",
+              "m":null,
+              "om":null,
+              "pa":1,
+              "pathTerm":null,
+              "pbu":null,
+              "ps":null,
+              "pt":null,
+              "pwbu":null,
+              "q":"cancer",
+              "rf":null,
+              "s":null,
+              "sa":null,
+              "aggsOnly":null,
+              "sm":null,
+              "sn":null,
+              "sp":null,
+              "spuid":null,
+              "sr":null,
+              "ss":null,
+              "syn":null,
+              "t":null,
+              "td":null,
+              "title":null,
+              "to":null,
+              "route":"search"
+           },
+           "isCurrent":true
+        },
+        {
+           "title":"2",
+           "url":{
+              "af":null,
+              "am":null,
+              "arms":null,
+              "ci":null,
+              "cid":null,
+              "co":null,
+              "em":null,
+              "fc":null,
+              "fd":null,
+              "from":null,
+              "fs":null,
+              "fullUrl":"search?pa=2&q=cancer",
+              "fullUrlWithDefaultRoot":"",
+              "m":null,
+              "om":null,
+              "pa":2,
+              "pathTerm":null,
+              "pbu":null,
+              "ps":null,
+              "pt":null,
+              "pwbu":null,
+              "q":"cancer",
+              "rf":null,
+              "s":null,
+              "sa":null,
+              "aggsOnly":null,
+              "sm":null,
+              "sn":null,
+              "sp":null,
+              "spuid":null,
+              "sr":null,
+              "ss":null,
+              "syn":null,
+              "t":null,
+              "td":null,
+              "title":null,
+              "to":null,
+              "route":"search"
+           },
+           "isCurrent":false
+        },
+        {
+           "title":"3",
+           "url":{
+              "af":null,
+              "am":null,
+              "arms":null,
+              "ci":null,
+              "cid":null,
+              "co":null,
+              "em":null,
+              "fc":null,
+              "fd":null,
+              "from":null,
+              "fs":null,
+              "fullUrl":"search?pa=3&q=cancer",
+              "fullUrlWithDefaultRoot":"",
+              "m":null,
+              "om":null,
+              "pa":3,
+              "pathTerm":null,
+              "pbu":null,
+              "ps":null,
+              "pt":null,
+              "pwbu":null,
+              "q":"cancer",
+              "rf":null,
+              "s":null,
+              "sa":null,
+              "aggsOnly":null,
+              "sm":null,
+              "sn":null,
+              "sp":null,
+              "spuid":null,
+              "sr":null,
+              "ss":null,
+              "syn":null,
+              "t":null,
+              "td":null,
+              "title":null,
+              "to":null,
+              "route":"search"
+           },
+           "isCurrent":false
+        },
+        {
+           "title":"4",
+           "url":{
+              "af":null,
+              "am":null,
+              "arms":null,
+              "ci":null,
+              "cid":null,
+              "co":null,
+              "em":null,
+              "fc":null,
+              "fd":null,
+              "from":null,
+              "fs":null,
+              "fullUrl":"search?pa=4&q=cancer",
+              "fullUrlWithDefaultRoot":"",
+              "m":null,
+              "om":null,
+              "pa":4,
+              "pathTerm":null,
+              "pbu":null,
+              "ps":null,
+              "pt":null,
+              "pwbu":null,
+              "q":"cancer",
+              "rf":null,
+              "s":null,
+              "sa":null,
+              "aggsOnly":null,
+              "sm":null,
+              "sn":null,
+              "sp":null,
+              "spuid":null,
+              "sr":null,
+              "ss":null,
+              "syn":null,
+              "t":null,
+              "td":null,
+              "title":null,
+              "to":null,
+              "route":"search"
+           },
+           "isCurrent":false
+        },
+        {
+           "title":"5",
+           "url":{
+              "af":null,
+              "am":null,
+              "arms":null,
+              "ci":null,
+              "cid":null,
+              "co":null,
+              "em":null,
+              "fc":null,
+              "fd":null,
+              "from":null,
+              "fs":null,
+              "fullUrl":"search?pa=5&q=cancer",
+              "fullUrlWithDefaultRoot":"",
+              "m":null,
+              "om":null,
+              "pa":5,
+              "pathTerm":null,
+              "pbu":null,
+              "ps":null,
+              "pt":null,
+              "pwbu":null,
+              "q":"cancer",
+              "rf":null,
+              "s":null,
+              "sa":null,
+              "aggsOnly":null,
+              "sm":null,
+              "sn":null,
+              "sp":null,
+              "spuid":null,
+              "sr":null,
+              "ss":null,
+              "syn":null,
+              "t":null,
+              "td":null,
+              "title":null,
+              "to":null,
+              "route":"search"
+           },
+           "isCurrent":false
+        },
+        {
+           "title":"6",
+           "url":{
+              "af":null,
+              "am":null,
+              "arms":null,
+              "ci":null,
+              "cid":null,
+              "co":null,
+              "em":null,
+              "fc":null,
+              "fd":null,
+              "from":null,
+              "fs":null,
+              "fullUrl":"search?pa=6&q=cancer",
+              "fullUrlWithDefaultRoot":"",
+              "m":null,
+              "om":null,
+              "pa":6,
+              "pathTerm":null,
+              "pbu":null,
+              "ps":null,
+              "pt":null,
+              "pwbu":null,
+              "q":"cancer",
+              "rf":null,
+              "s":null,
+              "sa":null,
+              "aggsOnly":null,
+              "sm":null,
+              "sn":null,
+              "sp":null,
+              "spuid":null,
+              "sr":null,
+              "ss":null,
+              "syn":null,
+              "t":null,
+              "td":null,
+              "title":null,
+              "to":null,
+              "route":"search"
+           },
+           "isCurrent":false
+        },
+        {
+           "title":"7",
+           "url":{
+              "af":null,
+              "am":null,
+              "arms":null,
+              "ci":null,
+              "cid":null,
+              "co":null,
+              "em":null,
+              "fc":null,
+              "fd":null,
+              "from":null,
+              "fs":null,
+              "fullUrl":"search?pa=7&q=cancer",
+              "fullUrlWithDefaultRoot":"",
+              "m":null,
+              "om":null,
+              "pa":7,
+              "pathTerm":null,
+              "pbu":null,
+              "ps":null,
+              "pt":null,
+              "pwbu":null,
+              "q":"cancer",
+              "rf":null,
+              "s":null,
+              "sa":null,
+              "aggsOnly":null,
+              "sm":null,
+              "sn":null,
+              "sp":null,
+              "spuid":null,
+              "sr":null,
+              "ss":null,
+              "syn":null,
+              "t":null,
+              "td":null,
+              "title":null,
+              "to":null,
+              "route":"search"
+           },
+           "isCurrent":false
+        }
+     ],
+     "next":{
+        "af":null,
+        "am":null,
+        "arms":null,
+        "ci":null,
+        "cid":null,
+        "co":null,
+        "em":null,
+        "fc":null,
+        "fd":null,
+        "from":null,
+        "fs":null,
+        "fullUrl":"search?pa=2&q=cancer",
+        "fullUrlWithDefaultRoot":"",
+        "m":null,
+        "om":null,
+        "pa":2,
+        "pathTerm":null,
+        "pbu":null,
+        "ps":null,
+        "pt":null,
+        "pwbu":null,
+        "q":"cancer",
+        "rf":null,
+        "s":null,
+        "sa":null,
+        "aggsOnly":null,
+        "sm":null,
+        "sn":null,
+        "sp":null,
+        "spuid":null,
+        "sr":null,
+        "ss":null,
+        "syn":null,
+        "t":null,
+        "td":null,
+        "title":null,
+        "to":null,
+        "route":"search"
+     }
+  },
+  "pageSize":10,
+  "firstResult":1,
+  "lastResult":10,
+  "finalSearchText":"cancer",
+  "finalSearchTextNoStopWords":"cancer",
+  "originalSearch":null,
+  "navigators":[
+     
+  ],
+  "unfilteredResultsUrl":null
+}
