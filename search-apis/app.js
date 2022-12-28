@@ -5,7 +5,7 @@ const path = require("path"),
 	jsonpath = require("jsonpath");
 
 const resultsDirectory = path.join(__dirname, "data", "results"),
-	typeAheadDirectory = path.join(__dirname, "data", "autocomplete");
+	typeAheadDirectory = path.join(__dirname, "data", "typeahead");
 
 const removeJsonFileExtension = (fileName) => path.basename(fileName, ".json");
 
