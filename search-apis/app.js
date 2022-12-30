@@ -66,6 +66,14 @@ app.get("/api/typeahead", async(req, res, next) => {
 	return res.typeAhead(queryTerm, next);
 });
 
+app.get("/api/typeahead/all", async(req, res, next) => {
+	const queryTerm = req.query?.q;
+	if(!queryTerm) {
+		return res.status(404).send("No search query provided");
+	}
+	return res.typeAhead(queryTerm, next);
+});
+
 // 404 handler
 app.use(function (req, res, next) {
 	res.status(404).send("Sorry can't find that!");
