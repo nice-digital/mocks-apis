@@ -5,7 +5,7 @@ const path = require("path"),
 	jsonpath = require("jsonpath");
 
 const resultsDirectory = path.join(__dirname, "data", "results"),
-	typeAheadDirectory = path.join(__dirname, "data", "autocomplete");
+	typeAheadDirectory = path.join(__dirname, "data", "typeahead");
 
 const removeJsonFileExtension = (fileName) => path.basename(fileName, ".json");
 
@@ -59,6 +59,14 @@ app.get("/api/search", async(req, res, next) => {
 });
 
 app.get("/api/typeahead", async(req, res, next) => {
+	const queryTerm = req.query?.q;
+	if(!queryTerm) {
+		return res.status(404).send("No search query provided");
+	}
+	return res.typeAhead(queryTerm, next);
+});
+
+app.get("/api/typeahead/all", async(req, res, next) => {
 	const queryTerm = req.query?.q;
 	if(!queryTerm) {
 		return res.status(404).send("No search query provided");
