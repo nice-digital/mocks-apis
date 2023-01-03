@@ -44,7 +44,7 @@ app.use(async (req, res, next) => {
 })
 
 app.get("/api/search", async(req, res, next) => {
-	const queryTerm = req.query?.q;
+	const queryTerm = req.query?.q.toLowerCase();
 	if(!queryTerm) {
 		return res.status(404).send("No search query provided");
 	}
@@ -59,7 +59,7 @@ app.get("/api/search", async(req, res, next) => {
 });
 
 app.get("/api/typeahead", async(req, res, next) => {
-	const queryTerm = req.query?.q;
+	const queryTerm = req.query?.q.toLowerCase();
 	if(!queryTerm) {
 		return res.status(404).send("No search query provided");
 	}
@@ -67,7 +67,7 @@ app.get("/api/typeahead", async(req, res, next) => {
 });
 
 app.get("/api/typeahead/all", async(req, res, next) => {
-	const queryTerm = req.query?.q;
+	const queryTerm = req.query?.q.toLowerCase();
 	if(!queryTerm) {
 		return res.status(404).send("No search query provided");
 	}
