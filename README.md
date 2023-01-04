@@ -14,7 +14,11 @@ The initial intended use for these mock responses is for any consuming applicati
 
 This folder comes with a Dockerfile so that it can be built straight from the git url.  For example:
 
-`docker build https://github.com/nice-digital/mocks-apis.git#main:search-apis -t mock-search-api` should build the image `mock-search-api`. 
+```
+docker build https://github.com/nice-digital/mocks-apis.git#main:search-apis -t mock-search-api
+```
+
+should build the image `mock-search-api`. 
 
 To run the container:
 
@@ -22,9 +26,24 @@ To run the container:
 
 Now you should be able to go to any of these links:
 
-http://localhost:3000/api/typeahead?q=re&index=cks (typeahead no results)
-http://localhost:3000/api/typeahead?q=ast&index=cks (typeahead results)
-http://localhost:3000/api/search?q=asdfg&index=cks (search no results)
-http://localhost:3000/api/search?q=cancer&index=cks (search results)
+- http://localhost:3000/api/typeahead?q=re&index=cks (typeahead no results)
+- http://localhost:3000/api/typeahead?q=ast&index=cks (typeahead results)
+- http://localhost:3000/api/search?q=asdfg&index=cks (search no results)
+- http://localhost:3000/api/search?q=cancer&index=cks (search results)
 
+## Docker compose
+
+Consuming this image in another docker compose file can be done like so:
+
+```
+  mock-api:
+    build: https://github.com/nice-digital/mocks-apis.git#main:search-apis
+    container_name: mock-api
+    ports:
+      - "3000:3000"
+    networks:
+      default:
+        aliases:
+          - test-search-api.nice.org.uk
+```
 
