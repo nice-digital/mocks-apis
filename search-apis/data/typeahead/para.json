@@ -1,0 +1,62 @@
+[
+    {
+    "Title": "Paracetamol",
+    "TitleHtml": "<mark>Para</mark>cetamol",
+    "Link": "search?q=Paracetamol",
+    "TypeAheadType": "keyword"
+    },
+    {
+    "Title": "Paracetamol and NSAIDs",
+    "TitleHtml": "<mark>Para</mark>cetamol and NSAIDs",
+    "Link": "search?q=Paracetamol+and+NSAIDs",
+    "TypeAheadType": "keyword"
+    },
+    {
+    "Title": "Paracetamol and codeine",
+    "TitleHtml": "<mark>Para</mark>cetamol and codeine",
+    "Link": "search?q=Paracetamol+and+codeine",
+    "TypeAheadType": "keyword"
+    },
+    {
+    "Title": "Paracetamol and ibuprofen",
+    "TitleHtml": "<mark>Para</mark>cetamol and ibuprofen",
+    "Link": "search?q=Paracetamol+and+ibuprofen",
+    "TypeAheadType": "keyword"
+    },
+    {
+    "Title": "Paracetamol andibuprofen",
+    "TitleHtml": "<mark>Para</mark>cetamol andibuprofen",
+    "Link": "search?q=Paracetamol+andibuprofen",
+    "TypeAheadType": "keyword"
+    },
+    {
+    "Title": "Paracetamol and weak opioids",
+    "TitleHtml": "<mark>Para</mark>cetamol and weak opioids",
+    "Link": "search?q=Paracetamol+and+weak+opioids",
+    "TypeAheadType": "keyword"
+    },
+    {
+    "Title": "Paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs)",
+    "TitleHtml": "<mark>Para</mark>cetamol and non-steroidal anti-inflammatory drugs (NSAIDs)",
+    "Link": "search?q=Paracetamol+and+non-steroidal+anti-inflammatory+drugs+(NSAIDs)",
+    "TypeAheadType": "keyword"
+    },
+    {
+    "Title": "Paracetamol and nonsteroidal anti-inflammatory drugs (NSAIDs)",
+    "TitleHtml": "<mark>Para</mark>cetamol and nonsteroidal anti-inflammatory drugs (NSAIDs)",
+    "Link": "search?q=Paracetamol+and+nonsteroidal+anti-inflammatory+drugs+(NSAIDs)",
+    "TypeAheadType": "keyword"
+    },
+    {
+    "Title": "Vitamin D preparations",
+    "TitleHtml": "Vitamin D pre<mark>para</mark>tions",
+    "Link": "search?q=Vitamin+D+preparations",
+    "TypeAheadType": "keyword"
+    },
+    {
+    "Title": "Ibuprofen and paracetamol",
+    "TitleHtml": "Ibuprofen and <mark>para</mark>cetamol",
+    "Link": "search?q=Ibuprofen+and+paracetamol",
+    "TypeAheadType": "keyword"
+    }
+]

@@ -9,7 +9,7 @@ const resultsDirectory = path.join(__dirname, "data", "results"),
 
 const removeJsonFileExtension = (fileName) => path.basename(fileName, ".json");
 
-const possibleIndexes = ['cks'];
+const possibleIndexes = ['cks', 'bnf'];
 const app = express();
 
 // Allow us to parse request bodies as JSON: https://stackoverflow.com/a/49943829/486434
@@ -51,11 +51,10 @@ app.get("/api/search", async(req, res, next) => {
 	if (typeof queryTerm === "undefined") return res.sendResults("empty", next);
 	// Look for a file in the results directory that matches the given query term
 	const resultFileName = (await fs.readdir(resultsDirectory))
-	.map(removeJsonFileExtension)
-	.find((f) => new RegExp(f, "i").test(queryTerm));
+		.map(removeJsonFileExtension)
+		.find((f) => new RegExp(f, "i").test(queryTerm));
 	
 	return res.sendResults(resultFileName || queryTerm, next);
-
 });
 
 app.get("/api/typeahead", async(req, res, next) => {
@@ -84,6 +83,5 @@ app.use(function (err, req, res, next) {
 	console.error(err);
 	res.status(500).send(`Server error: ${err.message} ${err.stack}`);
 });
-
 
 module.exports = app;
