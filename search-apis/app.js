@@ -4,8 +4,9 @@ const path = require("path"),
 	fs = require("fs-extra"),
 	jsonpath = require("jsonpath");
 
-const resultsDirectory = path.join(__dirname, "data", "results"),
-	typeAheadDirectory = path.join(__dirname, "data", "typeahead");
+const resultsDirectory = (index) => path.join(__dirname, "data", index, "results"),
+	typeAheadDirectory = (index) => path.join(__dirname, "data", index, "typeahead")
+	dataDirectory = path.join(__dirname, "data");
 
 const removeJsonFileExtension = (fileName) => path.basename(fileName, ".json");
 
@@ -17,7 +18,8 @@ app.use(express.json());
 
 // Response extensions for sending the mock search responses 
 app.use(async (req, res, next) => {
-	const emptyResult = path.join(resultsDirectory, `empty.json`);
+	const index = req.query?.index;
+	const emptyResult = path.join(dataDirectory, `empty.json`);
 	const sendResponse = async (fileName, directory, emptyResult) => {
 		const filePath = path.join(directory, `${fileName}.json`);
 		if (await fs.pathExists(filePath)) res.sendFile(filePath);
@@ -26,31 +28,29 @@ app.use(async (req, res, next) => {
 	
 	res.sendResults = async (fileName, next) => {
 		console.info(`Search request for ${fileName}`);
-		sendResponse(fileName, resultsDirectory, ()=> res.sendFile(emptyResult));
+		sendResponse(fileName, resultsDirectory(index), ()=> res.sendFile(emptyResult));
 	};
 
-	res.typeAhead = async (fileName, next) => {
+	res.typeAhead = async (fileName, index, next) => {
 		console.info(`TypeAhead request for ${fileName}`);
-		sendResponse(fileName, typeAheadDirectory, () => res.status(200).send([]));
+		sendResponse(fileName, typeAheadDirectory(index), () => res.status(200).send([]));
 	};
 
 	next();
 });
-app.use(async (req, res, next) => {
-	const index = req.query?.index;
-	possibleIndexes.find(i => i ===index) ?
-		next() :
-		res.status(404).send(`Specified index - ${index} not found.`);
-})
 
 app.get("/api/search", async(req, res, next) => {
 	const queryTerm = req.query?.q?.toLowerCase();
+	const index = req.query?.index?.toLowerCase();
 	if(!queryTerm) {
 		return res.status(404).send("No search query provided");
 	}
+	if(!index || possibleIndexes.indexOf(index) < 0) {
+		return res.status(404).send(`Specified index - ${index} not found.`);
+	}
 	if (typeof queryTerm === "undefined") return res.sendResults("empty", next);
 	// Look for a file in the results directory that matches the given query term
-	const resultFileName = (await fs.readdir(resultsDirectory))
+	const resultFileName = (await fs.readdir(resultsDirectory(index)))
 		.map(removeJsonFileExtension)
 		.find((f) => new RegExp(f, "i").test(queryTerm));
 	
@@ -59,18 +59,20 @@ app.get("/api/search", async(req, res, next) => {
 
 app.get("/api/typeahead", async(req, res, next) => {
 	const queryTerm = req.query?.q?.toLowerCase();
+	const index = req.query?.index?.toLowerCase();
 	if(!queryTerm) {
 		return res.status(404).send("No search query provided");
 	}
-	return res.typeAhead(queryTerm, next);
+	return res.typeAhead(queryTerm, index, next);
 });
 
 app.get("/api/typeahead/all", async(req, res, next) => {
 	const queryTerm = req.query?.q?.toLowerCase();
+	const index = req.query?.index.toLowerCase();
 	if(!queryTerm) {
 		return res.status(404).send("No search query provided");
 	}
-	return res.typeAhead(queryTerm, next);
+	return res.typeAhead(queryTerm, index, next);
 });
 
 // 404 handler

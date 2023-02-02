@@ -1,0 +1,1247 @@
+{
+    "debug": {
+      "rawResponse": "Valid NEST response built from a successful low level call on POST: /bnf/document/_search?typed_keys=true\r\n# Audit trail of this API call:\r\n - [1] HealthyResponse: Node: http://beta-elastic-6-cluster.nice.org.uk:9200/ Took: 00:00:00.0371901\r\n# Request:\r\n{\"from\":0,\"size\":10,\"highlight\":{\"pre_tags\":[\"<mark>\"],\"post_tags\":[\"</mark>\"],\"fields\":{\"content\":{\"fragment_size\":150,\"no_match_size\":150,\"type\":\"fvh\",\"matched_fields\":[\"content\",\"content.plain\"]},\"title\":{\"pre_tags\":[\"<b>\"],\"post_tags\":[\"</b>\"],\"fragment_size\":300,\"number_of_fragments\":0,\"type\":\"fvh\",\"matched_fields\":[\"title\",\"title.plain\"]}}},\"_source\":{\"excludes\":[\"content\"]},\"aggs\":{\"unique_count\":{\"cardinality\":{\"field\":\"clusterid\"}}},\"query\":{\"function_score\":{\"query\":{\"function_score\":{\"query\":{\"bool\":{\"should\":[{\"bool\":{\"should\":[{\"bool\":{\"must\":[{\"query_string\":{\"type\":\"best_fields\",\"query\":\"PARACETAMOL\",\"default_operator\":\"and\",\"analyzer\":\"fulltext_query\",\"analyze_wildcard\":true,\"fields\":[\"content\",\"title^2\",\"primarydrug\",\"metadescription\",\"headings\",\"keywords\"],\"tie_breaker\":1.0,\"quote_field_suffix\":\".plain\",\"auto_generate_synonyms_phrase_query\":false}}]}},{\"bool\":{\"must\":[{\"query_string\":{\"type\":\"best_fields\",\"query\":\"PARACETAMOL\",\"default_operator\":\"and\",\"analyzer\":\"fulltext_no_synonyms\",\"analyze_wildcard\":true,\"fields\":[\"content.plain\",\"title.plain^2\",\"metadescription.plain\",\"keywords.plain\"],\"tie_breaker\":1.0,\"quote_field_suffix\":\".plain\",\"auto_generate_synonyms_phrase_query\":false}}]}},{\"bool\":{\"must\":[{\"multi_match\":{\"type\":\"phrase\",\"query\":\"PARACETAMOL\",\"analyzer\":\"standard\",\"fields\":[\"title.plain\",\"content.plain\",\"metadescription.plain\"]}}]}}]}}]}},\"functions\":[{\"field_value_factor\":{\"field\":\"boostvalue\",\"factor\":0.01}}],\"score_mode\":\"multiply\"}},\"functions\":[{\"weight\":1.0}],\"score_mode\":\"multiply\"}}}\r\n# Response:\r\n{\"took\":30,\"timed_out\":false,\"_shards\":{\"total\":1,\"successful\":1,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":146,\"max_score\":99.99109,\"hits\":[{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2521630\",\"_score\":99.99109,\"_source\":{\"altsourceshort\":[\"BNFBNF\"],\"refresh\":\"1602\",\"destinationurl\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol/#indications-and-dose\",\"accredited\":\"False\",\"clusterid\":-2521630,\"title\":\"Paracetamol | Indications and dose | Drug\",\"url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol/#indications-and-dose\",\"landing_url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol/#indications-and-dose\",\"topicType\":\"Drug\",\"boostvalue\":200,\"feedertype\":\"pfeeders\",\"sectionType\":\"indications-and-dose\",\"source_name\":\"BNF Monograph sections BNF\"},\"highlight\":{\"title\":[\"<b>Paracetamol</b> | Indications and dose | Drug\"],\"content\":[\"Indications and dose For <mark>paracetamol</mark> Mild to moderate pain,  Pyrexia  for <mark>paracetamol</mark>  By mouth Adult 0.5-1 g every 4-6 hours; maximum 4 g per day.   \",\"hepatotoxicity,  Pyrexia in patients with risk factors for hepatotoxicity  for <mark>paracetamol</mark>  By intravenous infusion Adult (body-weight up to 50 kg) 15 mg/kg every\",\"minutes; maximum 3 g per day.     Pain,  Pyrexia with discomfort  for <mark>paracetamol</mark>  By mouth Child 3-5 months 60 mg every 4-6 hours; maximum 4 doses per\",\"500 mg every 4-6 hours.     Post-immunisation pyrexia in infants  for <mark>paracetamol</mark>  By mouth Child 2-3 months 60 mg for 1 dose, then 60 mg after 4-6 hours\",\"60 mg after 4-6 hours; maximum 4 doses per day.     Acute migraine  for <mark>paracetamol</mark>  By mouth Adult 1 g for 1 dose, to be taken as soon as migraine symptoms\"]}},{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2510582\",\"_score\":71.79873,\"_source\":{\"altsourceshort\":[\"BNFINT\"],\"metadescription\":\"Paracetamol has the following interaction information: 54 interactions: Acenocoumarol Alcohol Alectinib Asparaginase Atorvastatin Bedaquiline Busulfan Carbamaze...\",\"boostvalue\":100,\"destinationurl\":\"https://beta-bnf.nice.org.uk/interactions/paracetamol/\",\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2510582,\"title\":\"Paracetamol | Interactions\",\"url\":\"https://beta-bnf.nice.org.uk/interactions/paracetamol/\",\"source_name\":\"BNF interactions BNF\",\"landing_url\":\"https://beta-bnf.nice.org.uk/interactions/paracetamol/\",\"topicType\":\"Interactions\"},\"highlight\":{\"title\":[\"<b>Paracetamol</b> | Interactions\"],\"content\":[\"List of interactions for <mark>Paracetamol</mark>  54 interactions   Acenocoumarol  <mark>Paracetamol</mark> increases the anticoagulant effect of Acenocoumarol. Manufacturer advises\",\"damage when given with <mark>Paracetamol.</mark> Manufacturer makes no recommendation.    Severity: Severe  Evidence: Study    Both <mark>Paracetamol</mark> and Alcohol can increase\",\"hepatotoxicity.      Alectinib  Both <mark>Paracetamol</mark> and Alectinib can increase the risk of hepatotoxicity.      Asparaginase  Both <mark>Paracetamol</mark> and Asparaginase can increase\",\"    Atorvastatin  Both <mark>Paracetamol</mark> and Atorvastatin can increase the risk of hepatotoxicity.      Bedaquiline  Both <mark>Paracetamol</mark> and Bedaquiline can increase\",\"increase the risk of hepatotoxicity.      Busulfan  <mark>Paracetamol</mark> is predicted to decrease the clearance of Busulfan. Manufacturer advises caution.    Severity:\"]}},{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2509305\",\"_score\":63.15938,\"_source\":{\"altsourceshort\":[\"BNFBNF\"],\"autocomplete\":\"Paracetamol\",\"accredited\":\"False\",\"clusterid\":-2509305,\"title\":\"Paracetamol | Drug\",\"url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol/\",\"landing_url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol/\",\"topicType\":\"Drug\",\"typeAheadLink\":\"/drugs/paracetamol/\",\"boostvalue\":115,\"feedertype\":\"pfeeders\",\"typeAheadType\":\"Drug\",\"source_name\":\"BNF monographs BNF\"},\"highlight\":{\"title\":[\"<b>Paracetamol</b> | Drug\"],\"content\":[\"View <mark>paracetamol</mark> information, including dose, uses, side-effects, renal impairment, pregnancy, breast feeding and directions for administration.\"]}},{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2528816\",\"_score\":59.709923,\"_source\":{\"altsourceshort\":[\"BNFMF\"],\"metadescription\":\"Pricing and pack information for Tablet, Effervescent tablet, Orodispersible tablet, Capsule, Oral suspension, Oral solution, Solution for infusion, Suppository and Powder forms of Paracetamol\",\"boostvalue\":90,\"destinationurl\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol/medicinal-forms/\",\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2528816,\"title\":\"Paracetamol | Medicinal forms\",\"url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol/medicinal-forms/\",\"source_name\":\"BNF Medicinal forms BNF\",\"landing_url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol/medicinal-forms/\",\"topicType\":\"Medicinal forms\"},\"highlight\":{\"title\":[\"<b>Paracetamol</b> | Medicinal forms\"],\"content\":[\"chymryd mwy nag 8 mewn 24 awr  Label 30  Contains <mark>paracetamol.</mark> Do not take anything else containing <mark>paracetamol</mark> while taking this medicine. Talk to a doctor\",\"medicine, even if you feel well Yn cynnwys <mark>paracetamol.</mark> Peidiwch Ã¢ chymryd unrhyw beth arall sy'n cynnwys <mark>paracetamol</mark> tra'n cymryd y feddyginiaeth hon. Siaradwch\",\"chymryd mwy nag 8 mewn 24 awr  Label 30  Contains <mark>paracetamol.</mark> Do not take anything else containing <mark>paracetamol</mark> while taking this medicine. Talk to a doctor\",\"medicine, even if you feel well Yn cynnwys <mark>paracetamol.</mark> Peidiwch Ã¢ chymryd unrhyw beth arall sy'n cynnwys <mark>paracetamol</mark> tra'n cymryd y feddyginiaeth hon. Siaradwch\",\"cymryd gormod, hyd yn oed os ydych yn teimlo'n iawn    Active ingredients <mark>Paracetamol</mark> 500 mg    Size 100  Unit tablet  NHS indicative price  £1.34  Drug tariff\"]}},{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2528818\",\"_score\":59.272316,\"_source\":{\"altsourceshort\":[\"BNFMF\"],\"metadescription\":\"Pricing and pack information for Capsule forms of Paracetamol with isometheptene\",\"boostvalue\":90,\"destinationurl\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/medicinal-forms/\",\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2528818,\"title\":\"Paracetamol with isometheptene | Medicinal forms\",\"url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/medicinal-forms/\",\"source_name\":\"BNF Medicinal forms BNF\",\"landing_url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/medicinal-forms/\",\"topicType\":\"Medicinal forms\"},\"highlight\":{\"title\":[\"<b>Paracetamol</b> with isometheptene | Medicinal forms\"],\"content\":[\"Cautionary and advisory labels  Label 30  Contains <mark>paracetamol.</mark> Do not take anything else containing <mark>paracetamol</mark> while taking this medicine. Talk to a doctor\",\"medicine, even if you feel well Yn cynnwys <mark>paracetamol.</mark> Peidiwch Ã¢ chymryd unrhyw beth arall sy'n cynnwys <mark>paracetamol</mark> tra'n cymryd y feddyginiaeth hon. Siaradwch\",\"Cautionary and advisory labels  Label 30  Contains <mark>paracetamol.</mark> Do not take anything else containing <mark>paracetamol</mark> while taking this medicine. Talk to a doctor\",\"medicine, even if you feel well Yn cynnwys <mark>paracetamol.</mark> Peidiwch Ã¢ chymryd unrhyw beth arall sy'n cynnwys <mark>paracetamol</mark> tra'n cymryd y feddyginiaeth hon. Siaradwch\",\"ydych yn teimlo'n iawn    Active ingredients Isometheptene mucate 65 mg, <mark>Paracetamol</mark> 325 mg    Size 15  Unit capsule  NHS indicative price  £4.20  Drug tariff\"]}},{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2528122\",\"_score\":58.848682,\"_source\":{\"altsourceshort\":[\"BNFMF\"],\"metadescription\":\"Pricing and pack information for Tablet forms of Dihydrocodeine with paracetamol\",\"boostvalue\":90,\"destinationurl\":\"https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/medicinal-forms/\",\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2528122,\"title\":\"Dihydrocodeine with paracetamol | Medicinal forms\",\"url\":\"https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/medicinal-forms/\",\"source_name\":\"BNF Medicinal forms BNF\",\"landing_url\":\"https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/medicinal-forms/\",\"topicType\":\"Medicinal forms\"},\"highlight\":{\"title\":[\"Dihydrocodeine with <b>paracetamol</b> | Medicinal forms\"],\"content\":[\"chymryd mwy nag 8 mewn 24 awr  Label 30  Contains <mark>paracetamol.</mark> Do not take anything else containing <mark>paracetamol</mark> while taking this medicine. Talk to a doctor\",\"medicine, even if you feel well Yn cynnwys <mark>paracetamol.</mark> Peidiwch Ã¢ chymryd unrhyw beth arall sy'n cynnwys <mark>paracetamol</mark> tra'n cymryd y feddyginiaeth hon. Siaradwch\",\"chymryd mwy nag 8 mewn 24 awr  Label 30  Contains <mark>paracetamol.</mark> Do not take anything else containing <mark>paracetamol</mark> while taking this medicine. Talk to a doctor\",\"medicine, even if you feel well Yn cynnwys <mark>paracetamol.</mark> Peidiwch Ã¢ chymryd unrhyw beth arall sy'n cynnwys <mark>paracetamol</mark> tra'n cymryd y feddyginiaeth hon. Siaradwch\",\"Schedule 5 (CD Inv) Active ingredients Dihydrocodeine tartrate 7.46 mg, <mark>Paracetamol</mark> 500 mg    Size 12  Unit tablet  NHS indicative price  £2.20  Legal category\"]}},{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2529193\",\"_score\":58.045307,\"_source\":{\"altsourceshort\":[\"BNFMF\"],\"metadescription\":\"Pricing and pack information for Tablet and Effervescent tablet forms of Tramadol with paracetamol\",\"boostvalue\":90,\"destinationurl\":\"https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/medicinal-forms/\",\"feedertype\":\"pfeeders\",\"accredited\":\"False\",\"clusterid\":-2529193,\"title\":\"Tramadol with paracetamol | Medicinal forms\",\"url\":\"https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/medicinal-forms/\",\"source_name\":\"BNF Medicinal forms BNF\",\"landing_url\":\"https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/medicinal-forms/\",\"topicType\":\"Medicinal forms\"},\"highlight\":{\"title\":[\"Tramadol with <b>paracetamol</b> | Medicinal forms\"],\"content\":[\"chymryd mwy nag 8 mewn 24 awr  Label 30  Contains <mark>paracetamol.</mark> Do not take anything else containing <mark>paracetamol</mark> while taking this medicine. Talk to a doctor\",\"medicine, even if you feel well Yn cynnwys <mark>paracetamol.</mark> Peidiwch Ã¢ chymryd unrhyw beth arall sy'n cynnwys <mark>paracetamol</mark> tra'n cymryd y feddyginiaeth hon. Siaradwch\",\"chymryd mwy nag 8 mewn 24 awr  Label 30  Contains <mark>paracetamol.</mark> Do not take anything else containing <mark>paracetamol</mark> while taking this medicine. Talk to a doctor\",\"medicine, even if you feel well Yn cynnwys <mark>paracetamol.</mark> Peidiwch Ã¢ chymryd unrhyw beth arall sy'n cynnwys <mark>paracetamol</mark> tra'n cymryd y feddyginiaeth hon. Siaradwch\",\"  Schedule 3 (CD No Register Exempt Safe Custody) Active ingredients <mark>Paracetamol</mark> 325 mg, Tramadol hydrochloride 37.5 mg    Size 60  Unit tablet  NHS indicative\"]}},{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2509682\",\"_score\":57.731586,\"_source\":{\"altsourceshort\":[\"BNFBNF\"],\"autocomplete\":\"Tramadol with paracetamol\",\"accredited\":\"False\",\"clusterid\":-2509682,\"title\":\"Tramadol with paracetamol | Drug\",\"url\":\"https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/\",\"landing_url\":\"https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/\",\"topicType\":\"Drug\",\"typeAheadLink\":\"/drugs/tramadol-with-paracetamol/\",\"boostvalue\":115,\"feedertype\":\"pfeeders\",\"typeAheadType\":\"Drug\",\"source_name\":\"BNF monographs BNF\"},\"highlight\":{\"title\":[\"Tramadol with <b>paracetamol</b> | Drug\"],\"content\":[\"View tramadol with <mark>paracetamol</mark> information, including dose, uses.\"]}},{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2509307\",\"_score\":57.62082,\"_source\":{\"altsourceshort\":[\"BNFBNF\"],\"autocomplete\":\"Paracetamol with isometheptene\",\"accredited\":\"False\",\"clusterid\":-2509307,\"title\":\"Paracetamol with isometheptene | Drug\",\"url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/\",\"landing_url\":\"https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/\",\"topicType\":\"Drug\",\"typeAheadLink\":\"/drugs/paracetamol-with-isometheptene/\",\"boostvalue\":115,\"feedertype\":\"pfeeders\",\"typeAheadType\":\"Drug\",\"source_name\":\"BNF monographs BNF\"},\"highlight\":{\"title\":[\"<b>Paracetamol</b> with isometheptene | Drug\"],\"content\":[\"View <mark>paracetamol</mark> with isometheptene information, including dose, uses and contra-indications.\"]}},{\"_index\":\"bnf_2022_06_22\",\"_type\":\"document\",\"_id\":\"2508611\",\"_score\":57.207073,\"_source\":{\"altsourceshort\":[\"BNFBNF\"],\"autocomplete\":\"Dihydrocodeine with paracetamol\",\"accredited\":\"False\",\"clusterid\":-2508611,\"title\":\"Dihydrocodeine with paracetamol | Drug\",\"url\":\"https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/\",\"landing_url\":\"https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/\",\"topicType\":\"Drug\",\"typeAheadLink\":\"/drugs/dihydrocodeine-with-paracetamol/\",\"boostvalue\":115,\"feedertype\":\"pfeeders\",\"typeAheadType\":\"Drug\",\"source_name\":\"BNF monographs BNF\"},\"highlight\":{\"title\":[\"Dihydrocodeine with <b>paracetamol</b> | Drug\"],\"content\":[\"View dihydrocodeine with <mark>paracetamol</mark> information, including dose, uses, side-effects, renal impairment, pregnancy, breast feeding, contra-indications and\"]}}]},\"aggregations\":{\"cardinality#unique_count\":{\"value\":146}}}\r\n"
+    },
+    "failed": false,
+    "errorMessage": null,
+    "parentResultUrl": null,
+    "resultCount": 146,
+    "rolledUpCount": 146,
+    "unrolledCount": 146,
+    "documents": [
+      {
+        "id": "2521630",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": null,
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFBNF"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2521630,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/drugs/paracetamol/#indications-and-dose",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/drugs/paracetamol/#indications-and-dose",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF Monograph sections BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/drugs/paracetamol/#indications-and-dose",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "Indications and dose For <mark>paracetamol</mark> Mild to moderate pain, Pyrexia for <mark>paracetamol</mark> By mouth Adult 0.5-1 g every 4-6 hours;...",
+        "title": "<b>Paracetamol</b> | Indications and dose | Drug",
+        "titleNoHtml": null,
+        "boostValue": 200,
+        "score": 99.99109,
+        "titleParts": [
+          "<b>Paracetamol</b> | Indications and dose | Drug"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/drugs/paracetamol/#indications-and-dose",
+        "debug": null
+      },
+      {
+        "id": "2510582",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": "Paracetamol has the following interaction information: 54 interactions: Acenocoumarol Alcohol Alectinib Asparaginase Atorvastatin Bedaquiline Busulfan Carbamaze...",
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFINT"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2510582,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/interactions/paracetamol/",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/interactions/paracetamol/",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF interactions BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/interactions/paracetamol/",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "Paracetamol has the following interaction information: 54 interactions: Acenocoumarol Alcohol Alectinib Asparaginase Atorvastatin Bedaquiline Busulfan Carbamaze...",
+        "title": "<b>Paracetamol</b> | Interactions",
+        "titleNoHtml": null,
+        "boostValue": 100,
+        "score": 71.79873,
+        "titleParts": [
+          "<b>Paracetamol</b> | Interactions"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/interactions/paracetamol/",
+        "debug": null
+      },
+      {
+        "id": "2509305",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": null,
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFBNF"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2509305,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/drugs/paracetamol/",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/drugs/paracetamol/",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF monographs BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/drugs/paracetamol/",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "View <mark>paracetamol</mark> information, including dose, uses, side-effects, renal impairment, pregnancy, breast feeding and directions for...",
+        "title": "<b>Paracetamol</b> | Drug",
+        "titleNoHtml": null,
+        "boostValue": 115,
+        "score": 63.15938,
+        "titleParts": [
+          "<b>Paracetamol</b> | Drug"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/drugs/paracetamol/",
+        "debug": null
+      },
+      {
+        "id": "2528816",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": "Pricing and pack information for Tablet, Effervescent tablet, Orodispersible tablet, Capsule, Oral suspension, Oral solution, Solution for infusion, Suppository and Powder forms of Paracetamol",
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFMF"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2528816,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/drugs/paracetamol/medicinal-forms/",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/drugs/paracetamol/medicinal-forms/",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF Medicinal forms BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/drugs/paracetamol/medicinal-forms/",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "Pricing and pack information for Tablet, Effervescent tablet, Orodispersible tablet, Capsule, Oral suspension, Oral solution, Solution for infusion, Suppository and Powder forms of Paracetamol",
+        "title": "<b>Paracetamol</b> | Medicinal forms",
+        "titleNoHtml": null,
+        "boostValue": 90,
+        "score": 59.709923,
+        "titleParts": [
+          "<b>Paracetamol</b> | Medicinal forms"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/drugs/paracetamol/medicinal-forms/",
+        "debug": null
+      },
+      {
+        "id": "2528818",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": "Pricing and pack information for Capsule forms of Paracetamol with isometheptene",
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFMF"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2528818,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/medicinal-forms/",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/drugs/paracetamol-with-isometheptene/medicinal-forms/",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF Medicinal forms BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/medicinal-forms/",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "Pricing and pack information for Capsule forms of Paracetamol with isometheptene",
+        "title": "<b>Paracetamol</b> with isometheptene | Medicinal forms",
+        "titleNoHtml": null,
+        "boostValue": 90,
+        "score": 59.272316,
+        "titleParts": [
+          "<b>Paracetamol</b> with isometheptene | Medicinal forms"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/medicinal-forms/",
+        "debug": null
+      },
+      {
+        "id": "2528122",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": "Pricing and pack information for Tablet forms of Dihydrocodeine with paracetamol",
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFMF"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2528122,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/medicinal-forms/",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/drugs/dihydrocodeine-with-paracetamol/medicinal-forms/",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF Medicinal forms BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/medicinal-forms/",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "Pricing and pack information for Tablet forms of Dihydrocodeine with paracetamol",
+        "title": "Dihydrocodeine with <b>paracetamol</b> | Medicinal forms",
+        "titleNoHtml": null,
+        "boostValue": 90,
+        "score": 58.848682,
+        "titleParts": [
+          "Dihydrocodeine with <b>paracetamol</b> | Medicinal forms"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/medicinal-forms/",
+        "debug": null
+      },
+      {
+        "id": "2529193",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": "Pricing and pack information for Tablet and Effervescent tablet forms of Tramadol with paracetamol",
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFMF"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2529193,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/medicinal-forms/",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/drugs/tramadol-with-paracetamol/medicinal-forms/",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF Medicinal forms BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/medicinal-forms/",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "Pricing and pack information for Tablet and Effervescent tablet forms of Tramadol with paracetamol",
+        "title": "Tramadol with <b>paracetamol</b> | Medicinal forms",
+        "titleNoHtml": null,
+        "boostValue": 90,
+        "score": 58.045307,
+        "titleParts": [
+          "Tramadol with <b>paracetamol</b> | Medicinal forms"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/medicinal-forms/",
+        "debug": null
+      },
+      {
+        "id": "2509682",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": null,
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFBNF"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2509682,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/drugs/tramadol-with-paracetamol/",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF monographs BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "View tramadol with <mark>paracetamol</mark> information, including dose, uses.",
+        "title": "Tramadol with <b>paracetamol</b> | Drug",
+        "titleNoHtml": null,
+        "boostValue": 115,
+        "score": 57.731586,
+        "titleParts": [
+          "Tramadol with <b>paracetamol</b> | Drug"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/drugs/tramadol-with-paracetamol/",
+        "debug": null
+      },
+      {
+        "id": "2509307",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": null,
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFBNF"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2509307,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/drugs/paracetamol-with-isometheptene/",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF monographs BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "View <mark>paracetamol</mark> with isometheptene information, including dose, uses and contra-indications.",
+        "title": "<b>Paracetamol</b> with isometheptene | Drug",
+        "titleNoHtml": null,
+        "boostValue": 115,
+        "score": 57.62082,
+        "titleParts": [
+          "<b>Paracetamol</b> with isometheptene | Drug"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/drugs/paracetamol-with-isometheptene/",
+        "debug": null
+      },
+      {
+        "id": "2508611",
+        "tagsHigh": null,
+        "guidanceRef": null,
+        "xml": null,
+        "abstract": null,
+        "metaDescription": null,
+        "accredited": false,
+        "alternativePublicationDate": null,
+        "altSourceNames": [
+          "BNFBNF"
+        ],
+        "areaOfInterest": null,
+        "breadcrumbs": null,
+        "childDocumentCount": 0,
+        "childDocuments": [
+          
+        ],
+        "childDocumentsUrl": null,
+        "clusterId": -2508611,
+        "evidenceTypes": [
+          
+        ],
+        "headings": null,
+        "impact": null,
+        "content": null,
+        "contentId": "https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/",
+        "index": 0,
+        "lessSuitableForPrescribing": false,
+        "niceDocType": [
+          
+        ],
+        "niceGuidanceType": [
+          
+        ],
+        "niceAdviceType": [
+          
+        ],
+        "niceResultType": null,
+        "parentPathTitle": null,
+        "parentPathUrl": null,
+        "parentPathWayUrl": null,
+        "pathAndQuery": "/drugs/dihydrocodeine-with-paracetamol/",
+        "primaryDrug": null,
+        "publicationDate": null,
+        "lastUpdated": null,
+        "expectedPublicationDate": null,
+        "consultationEndDate": null,
+        "consultationType": null,
+        "resourceType": [
+          
+        ],
+        "guidanceStatus": [
+          
+        ],
+        "publicationType": null,
+        "publisher": null,
+        "resourceCategory": null,
+        "relatedLinks": null,
+        "relatedLinkList": {
+          
+        },
+        "technologyType": null,
+        "topicSelectionDecision": null,
+        "sourceName": "BNF monographs BNF",
+        "sourceUrl": "https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/",
+        "staticAbstract": null,
+        "subSectionLinks": null,
+        "subSections": [
+          
+        ],
+        "summaryUrl": null,
+        "tags": [
+          
+        ],
+        "teaser": "View dihydrocodeine with <mark>paracetamol</mark> information, including dose, uses, side-effects, renal impairment, pregnancy, breast feeding,...",
+        "title": "Dihydrocodeine with <b>paracetamol</b> | Drug",
+        "titleNoHtml": null,
+        "boostValue": 115,
+        "score": 57.207073,
+        "titleParts": [
+          "Dihydrocodeine with <b>paracetamol</b> | Drug"
+        ],
+        "ukmiSummaryUrl": null,
+        "url": "https://beta-bnf.nice.org.uk/drugs/dihydrocodeine-with-paracetamol/",
+        "debug": null
+      }
+    ],
+    "pagerLinks": {
+      "previous": null,
+      "first": null,
+      "pages": [
+        {
+          "title": "1",
+          "url": {
+            "af": null,
+            "am": null,
+            "arms": null,
+            "ci": null,
+            "cid": null,
+            "co": null,
+            "em": null,
+            "fc": null,
+            "fd": null,
+            "from": null,
+            "fs": null,
+            "fullUrl": "search?pa=1&q=paracetamol",
+            "fullUrlWithDefaultRoot": "",
+            "m": null,
+            "om": null,
+            "pa": 1,
+            "pathTerm": null,
+            "pbu": null,
+            "ps": null,
+            "pt": null,
+            "pwbu": null,
+            "q": "paracetamol",
+            "rf": null,
+            "s": null,
+            "sa": null,
+            "aggsOnly": null,
+            "sm": null,
+            "sn": null,
+            "sp": null,
+            "spuid": null,
+            "sr": null,
+            "ss": null,
+            "syn": null,
+            "t": null,
+            "td": null,
+            "title": null,
+            "to": null,
+            "route": "search"
+          },
+          "isCurrent": true
+        },
+        {
+          "title": "2",
+          "url": {
+            "af": null,
+            "am": null,
+            "arms": null,
+            "ci": null,
+            "cid": null,
+            "co": null,
+            "em": null,
+            "fc": null,
+            "fd": null,
+            "from": null,
+            "fs": null,
+            "fullUrl": "search?pa=2&q=paracetamol",
+            "fullUrlWithDefaultRoot": "",
+            "m": null,
+            "om": null,
+            "pa": 2,
+            "pathTerm": null,
+            "pbu": null,
+            "ps": null,
+            "pt": null,
+            "pwbu": null,
+            "q": "paracetamol",
+            "rf": null,
+            "s": null,
+            "sa": null,
+            "aggsOnly": null,
+            "sm": null,
+            "sn": null,
+            "sp": null,
+            "spuid": null,
+            "sr": null,
+            "ss": null,
+            "syn": null,
+            "t": null,
+            "td": null,
+            "title": null,
+            "to": null,
+            "route": "search"
+          },
+          "isCurrent": false
+        },
+        {
+          "title": "3",
+          "url": {
+            "af": null,
+            "am": null,
+            "arms": null,
+            "ci": null,
+            "cid": null,
+            "co": null,
+            "em": null,
+            "fc": null,
+            "fd": null,
+            "from": null,
+            "fs": null,
+            "fullUrl": "search?pa=3&q=paracetamol",
+            "fullUrlWithDefaultRoot": "",
+            "m": null,
+            "om": null,
+            "pa": 3,
+            "pathTerm": null,
+            "pbu": null,
+            "ps": null,
+            "pt": null,
+            "pwbu": null,
+            "q": "paracetamol",
+            "rf": null,
+            "s": null,
+            "sa": null,
+            "aggsOnly": null,
+            "sm": null,
+            "sn": null,
+            "sp": null,
+            "spuid": null,
+            "sr": null,
+            "ss": null,
+            "syn": null,
+            "t": null,
+            "td": null,
+            "title": null,
+            "to": null,
+            "route": "search"
+          },
+          "isCurrent": false
+        },
+        {
+          "title": "4",
+          "url": {
+            "af": null,
+            "am": null,
+            "arms": null,
+            "ci": null,
+            "cid": null,
+            "co": null,
+            "em": null,
+            "fc": null,
+            "fd": null,
+            "from": null,
+            "fs": null,
+            "fullUrl": "search?pa=4&q=paracetamol",
+            "fullUrlWithDefaultRoot": "",
+            "m": null,
+            "om": null,
+            "pa": 4,
+            "pathTerm": null,
+            "pbu": null,
+            "ps": null,
+            "pt": null,
+            "pwbu": null,
+            "q": "paracetamol",
+            "rf": null,
+            "s": null,
+            "sa": null,
+            "aggsOnly": null,
+            "sm": null,
+            "sn": null,
+            "sp": null,
+            "spuid": null,
+            "sr": null,
+            "ss": null,
+            "syn": null,
+            "t": null,
+            "td": null,
+            "title": null,
+            "to": null,
+            "route": "search"
+          },
+          "isCurrent": false
+        },
+        {
+          "title": "5",
+          "url": {
+            "af": null,
+            "am": null,
+            "arms": null,
+            "ci": null,
+            "cid": null,
+            "co": null,
+            "em": null,
+            "fc": null,
+            "fd": null,
+            "from": null,
+            "fs": null,
+            "fullUrl": "search?pa=5&q=paracetamol",
+            "fullUrlWithDefaultRoot": "",
+            "m": null,
+            "om": null,
+            "pa": 5,
+            "pathTerm": null,
+            "pbu": null,
+            "ps": null,
+            "pt": null,
+            "pwbu": null,
+            "q": "paracetamol",
+            "rf": null,
+            "s": null,
+            "sa": null,
+            "aggsOnly": null,
+            "sm": null,
+            "sn": null,
+            "sp": null,
+            "spuid": null,
+            "sr": null,
+            "ss": null,
+            "syn": null,
+            "t": null,
+            "td": null,
+            "title": null,
+            "to": null,
+            "route": "search"
+          },
+          "isCurrent": false
+        },
+        {
+          "title": "6",
+          "url": {
+            "af": null,
+            "am": null,
+            "arms": null,
+            "ci": null,
+            "cid": null,
+            "co": null,
+            "em": null,
+            "fc": null,
+            "fd": null,
+            "from": null,
+            "fs": null,
+            "fullUrl": "search?pa=6&q=paracetamol",
+            "fullUrlWithDefaultRoot": "",
+            "m": null,
+            "om": null,
+            "pa": 6,
+            "pathTerm": null,
+            "pbu": null,
+            "ps": null,
+            "pt": null,
+            "pwbu": null,
+            "q": "paracetamol",
+            "rf": null,
+            "s": null,
+            "sa": null,
+            "aggsOnly": null,
+            "sm": null,
+            "sn": null,
+            "sp": null,
+            "spuid": null,
+            "sr": null,
+            "ss": null,
+            "syn": null,
+            "t": null,
+            "td": null,
+            "title": null,
+            "to": null,
+            "route": "search"
+          },
+          "isCurrent": false
+        },
+        {
+          "title": "7",
+          "url": {
+            "af": null,
+            "am": null,
+            "arms": null,
+            "ci": null,
+            "cid": null,
+            "co": null,
+            "em": null,
+            "fc": null,
+            "fd": null,
+            "from": null,
+            "fs": null,
+            "fullUrl": "search?pa=7&q=paracetamol",
+            "fullUrlWithDefaultRoot": "",
+            "m": null,
+            "om": null,
+            "pa": 7,
+            "pathTerm": null,
+            "pbu": null,
+            "ps": null,
+            "pt": null,
+            "pwbu": null,
+            "q": "paracetamol",
+            "rf": null,
+            "s": null,
+            "sa": null,
+            "aggsOnly": null,
+            "sm": null,
+            "sn": null,
+            "sp": null,
+            "spuid": null,
+            "sr": null,
+            "ss": null,
+            "syn": null,
+            "t": null,
+            "td": null,
+            "title": null,
+            "to": null,
+            "route": "search"
+          },
+          "isCurrent": false
+        }
+      ],
+      "next": {
+        "af": null,
+        "am": null,
+        "arms": null,
+        "ci": null,
+        "cid": null,
+        "co": null,
+        "em": null,
+        "fc": null,
+        "fd": null,
+        "from": null,
+        "fs": null,
+        "fullUrl": "search?pa=2&q=paracetamol",
+        "fullUrlWithDefaultRoot": "",
+        "m": null,
+        "om": null,
+        "pa": 2,
+        "pathTerm": null,
+        "pbu": null,
+        "ps": null,
+        "pt": null,
+        "pwbu": null,
+        "q": "paracetamol",
+        "rf": null,
+        "s": null,
+        "sa": null,
+        "aggsOnly": null,
+        "sm": null,
+        "sn": null,
+        "sp": null,
+        "spuid": null,
+        "sr": null,
+        "ss": null,
+        "syn": null,
+        "t": null,
+        "td": null,
+        "title": null,
+        "to": null,
+        "route": "search"
+      }
+    },
+    "pageSize": 10,
+    "firstResult": 1,
+    "lastResult": 10,
+    "finalSearchText": "paracetamol",
+    "finalSearchTextNoStopWords": "paracetamol",
+    "originalSearch": null,
+    "navigators": [
+      
+    ],
+    "unfilteredResultsUrl": null
+  }

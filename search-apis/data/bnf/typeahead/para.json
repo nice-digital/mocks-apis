@@ -1,0 +1,62 @@
+[
+  {
+    "Title": "Paracetamol",
+    "TitleHtml": "<mark>Par</mark><mark>a</mark>cetamol",
+    "Link": "/drugs/paracetamol/",
+    "TypeAheadType": "Drug"
+  },
+  {
+    "Title": "Paracetamol with buclizine hydrochloride and codeine phosphate",
+    "TitleHtml": "<mark>Par</mark><mark>a</mark>cetamol with buclizine hydrochloride and codeine phosphate",
+    "Link": "/drugs/paracetamol-with-buclizine-hydrochloride-and-codeine-phosphate/",
+    "TypeAheadType": "Drug"
+  },
+  {
+    "Title": "Paracetamol with isometheptene",
+    "TitleHtml": "<mark>Par</mark><mark>a</mark>cetamol with isometheptene",
+    "Link": "/drugs/paracetamol-with-isometheptene/",
+    "TypeAheadType": "Drug"
+  },
+  {
+    "Title": "Paraffin, yellow, soft",
+    "TitleHtml": "<mark>Par</mark><mark>a</mark>ffin, yellow, soft",
+    "Link": "/drugs/paraffin-yellow-soft/",
+    "TypeAheadType": "Drug"
+  },
+  {
+    "Title": "Parathyroid hormone",
+    "TitleHtml": "<mark>Par</mark><mark>a</mark>thyroid hormone",
+    "Link": "/drugs/parathyroid-hormone/",
+    "TypeAheadType": "Drug"
+  },
+  {
+    "Title": "Retinol palmitate with white soft paraffin, light liquid paraffin, liquid paraffin and wool fat",
+    "TitleHtml": "Retinol palmitate with white soft <mark>par</mark><mark>a</mark>ffin, light liquid <mark>par</mark><mark>a</mark>ffin, liquid <mark>par</mark><mark>a</mark>ffin and wool fat",
+    "Link": "/drugs/retinol-palmitate-with-white-soft-paraffin-light-liquid-paraffin-liquid-paraffin-and-wool-fat/",
+    "TypeAheadType": "Drug"
+  },
+  {
+    "Title": "Liquid paraffin with white soft paraffin and wool alcohols",
+    "TitleHtml": "Liquid <mark>par</mark><mark>a</mark>ffin with white soft <mark>par</mark><mark>a</mark>ffin and wool alcohols",
+    "Link": "/drugs/liquid-paraffin-with-white-soft-paraffin-and-wool-alcohols/",
+    "TypeAheadType": "Drug"
+  },
+  {
+    "Title": "Paraffin Gauze Dressing",
+    "TitleHtml": "<mark>Par</mark><mark>a</mark>ffin Gauze Dressing",
+    "Link": "/wound-management/basic-wound-contact-dressings/paraffin-gauze-dressing/",
+    "TypeAheadType": "WoundManagement"
+  },
+  {
+    "Title": "Asparaginase",
+    "TitleHtml": "As<mark>par</mark><mark>a</mark>ginase",
+    "Link": "/drugs/asparaginase/",
+    "TypeAheadType": "Drug"
+  },
+  {
+    "Title": "Dihydrocodeine with paracetamol",
+    "TitleHtml": "Dihydrocodeine with <mark>par</mark><mark>a</mark>cetamol",
+    "Link": "/drugs/dihydrocodeine-with-paracetamol/",
+    "TypeAheadType": "Drug"
+  }
+]
