@@ -1,0 +1,36 @@
+{
+  "Failed": false,
+  "ErrorMessage": null,
+  "Results": [
+    {
+      "Title": "Ovarian cancer",
+      "TitleHtml": "Ovarian <mark>cancer</mark>",
+      "Link": "/topics/ovarian-cancer/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Prostate cancer",
+      "TitleHtml": "Prostate <mark>cancer</mark>",
+      "Link": "/topics/prostate-cancer/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Cervical cancer and HPV",
+      "TitleHtml": "Cervical <mark>cancer</mark> and HPV",
+      "Link": "/topics/cervical-cancer-hpv/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Breast cancer - managing FH",
+      "TitleHtml": "Breast <mark>cancer</mark> - managing FH",
+      "Link": "/topics/breast-cancer-managing-fh/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Palliative cancer care - pain",
+      "TitleHtml": "Palliative <mark>cancer</mark> care - pain",
+      "Link": "/topics/palliative-cancer-care-pain/",
+      "TypeAheadType": "topic"
+    }
+  ]
+}
