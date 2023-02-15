@@ -1,0 +1,66 @@
+{
+  "Failed": false,
+  "ErrorMessage": null,
+  "Results": [
+    {
+      "Title": "Asthma",
+      "TitleHtml": "<mark>Ast</mark>hma",
+      "Link": "/topics/asthma/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Finasteride",
+      "TitleHtml": "Fin<mark>ast</mark>eride",
+      "Link": "search?q=Finasteride",
+      "TypeAheadType": "keyword"
+    },
+    {
+      "Title": "Mastitis and breast abscess",
+      "TitleHtml": "M<mark>ast</mark>itis and bre<mark>ast</mark> abscess",
+      "Link": "/topics/mastitis-breast-abscess/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Gastroenteritis",
+      "TitleHtml": "G<mark>ast</mark>roenteritis",
+      "Link": "/topics/gastroenteritis/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Breast screening",
+      "TitleHtml": "Bre<mark>ast</mark> screening",
+      "Link": "/topics/breast-screening/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Statins (atorvastatin, rosuvastatin, and simvastatin)",
+      "TitleHtml": "Statins (atorv<mark>ast</mark>atin, rosuv<mark>ast</mark>atin, and simv<mark>ast</mark>atin)",
+      "Link": "search?q=Statins+(atorvastatin%2c+rosuvastatin%2c+and+simvastatin)",
+      "TypeAheadType": "keyword"
+    },
+    {
+      "Title": "Lidocaine plasters",
+      "TitleHtml": "Lidocaine pl<mark>ast</mark>ers",
+      "Link": "search?q=Lidocaine+plasters",
+      "TypeAheadType": "keyword"
+    },
+    {
+      "Title": "Breast pain - cyclical",
+      "TitleHtml": "Bre<mark>ast</mark> pain - cyclical",
+      "Link": "/topics/breast-pain-cyclical/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Breastfeeding problems",
+      "TitleHtml": "Bre<mark>ast</mark>feeding problems",
+      "Link": "/topics/breastfeeding-problems/",
+      "TypeAheadType": "topic"
+    },
+    {
+      "Title": "Breast cancer - managing FH",
+      "TitleHtml": "Bre<mark>ast</mark> cancer - managing FH",
+      "Link": "/topics/breast-cancer-managing-fh/",
+      "TypeAheadType": "topic"
+    }
+  ]
+}
