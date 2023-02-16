@@ -2,7 +2,8 @@ const { query } = require("express");
 const path = require("path"),
 	express = require("express"),
 	fs = require("fs-extra"),
-	jsonpath = require("jsonpath");
+	jsonpath = require("jsonpath"),
+	cors = require("cors");
 
 const resultsDirectory = (index) => path.join(__dirname, "data", index, "results"),
 	typeAheadDirectory = (index) => path.join(__dirname, "data", index, "typeahead")
@@ -13,6 +14,7 @@ const removeJsonFileExtension = (fileName) => path.basename(fileName, ".json");
 const possibleIndexes = ['cks', 'bnf'];
 const app = express();
 
+app.use(cors());
 // Allow us to parse request bodies as JSON: https://stackoverflow.com/a/49943829/486434
 app.use(express.json());
 
