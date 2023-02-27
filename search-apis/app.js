@@ -45,7 +45,8 @@ app.get("/api/search", async(req, res, next) => {
 	const queryTerm = req.query?.q?.toLowerCase();
 	const index = req.query?.index?.toLowerCase();
 	if(!queryTerm) {
-		return res.status(404).send("No search query provided");
+		const emptyResult = path.join(dataDirectory, `empty.json`);
+		return res.status(200).sendFile(emptyResult);
 	}
 	if(!index || possibleIndexes.indexOf(index) < 0) {
 		return res.status(404).send(`Specified index - ${index} not found.`);

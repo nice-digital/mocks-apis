@@ -13,10 +13,10 @@ describe("Search api", () => {
         expect(res.body.documents).toEqual([]);
         expect(res.status).toBe(200);
     })
-    it("search with no query term should return empty results", async () => {
+    it("search with no query term should return a result that is empty", async () => {
         const res = await request.get('/api/search')
         expect(res.text).toBeDefined();
-        expect(res.status).toBe(404);
+        expect(res.status).toBe(200);
     })
 })
 
