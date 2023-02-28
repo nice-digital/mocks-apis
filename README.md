@@ -1,6 +1,6 @@
-# Mock search api
+# Mock api
 
-> Gives mock hard coded responses to certain search api endpoints
+> For now only mock hard coded responses to certain search api endpoints are held in this repository.  Later other mock responses can be held here.
 
 ## Getting started
 
