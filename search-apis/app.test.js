@@ -13,9 +13,12 @@ describe("Search api", () => {
         expect(res.body.documents).toEqual([]);
         expect(res.status).toBe(200);
     })
-    it("search with no query term should return a result that is empty", async () => {
-        const res = await request.get('/api/search')
-        expect(res.text).toBeDefined();
+    it.each([
+        ['cks'],
+        ['bnf']
+    ])("search with no query term should return a result that is empty %p", async (index) => {
+        const res = await request.get(`/api/search?index=${index}`)
+        expect(res.body.debug.rawResponse).toBeDefined();
         expect(res.status).toBe(200);
     })
 })
@@ -50,6 +53,6 @@ describe("Incorrect url", () => {
 describe("Specified index does not exist", () => {
     it("should return 404 response", async () => {
         const res = await request.get('/api/search?q=ast&index=doesnotexist');
-        expect(res.status).toBe(404);
+        expect(res.status).toBe(400);
     })
 })

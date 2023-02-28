@@ -2,7 +2,6 @@ const { query } = require("express");
 const path = require("path"),
 	express = require("express"),
 	fs = require("fs-extra"),
-	jsonpath = require("jsonpath"),
 	cors = require("cors");
 
 const resultsDirectory = (index) => path.join(__dirname, "data", index, "results"),
@@ -29,8 +28,8 @@ app.use(async (req, res, next) => {
 	};
 	
 	res.sendResults = async (fileName, next) => {
-		console.info(`Search request for ${fileName}`);
-		sendResponse(fileName, resultsDirectory(index), ()=> res.sendFile(emptyResult));
+		console.info(`Search request for ${fileName} for ${index}`);
+		sendResponse(fileName, resultsDirectory(index), () => res.sendFile(emptyResult));
 	};
 
 	res.typeAhead = async (fileName, index, next) => {
@@ -38,6 +37,11 @@ app.use(async (req, res, next) => {
 		sendResponse(fileName, typeAheadDirectory(index), () => res.status(200).send([]));
 	};
 
+	res.noSearchTerm = async (fileName, index, next) => {
+		console.info(`No Search Term specified for index ${index}`);
+		sendResponse(fileName, resultsDirectory(index), () => res.sendFile(emptyResult));
+	};
+	
 	next();
 });
 
@@ -45,11 +49,10 @@ app.get("/api/search", async(req, res, next) => {
 	const queryTerm = req.query?.q?.toLowerCase();
 	const index = req.query?.index?.toLowerCase();
 	if(!queryTerm) {
-		const emptyResult = path.join(dataDirectory, `empty.json`);
-		return res.status(200).sendFile(emptyResult);
+		return res.noSearchTerm('noSearchTerm', index, next);
 	}
 	if(!index || possibleIndexes.indexOf(index) < 0) {
-		return res.status(404).send(`Specified index - ${index} not found.`);
+		return res.status(400).send(`Specified index - ${index} not found.`);
 	}
 	if (typeof queryTerm === "undefined") return res.sendResults("empty", next);
 	// Look for a file in the results directory that matches the given query term
