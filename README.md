@@ -4,6 +4,7 @@
 
 ## Getting started
 
+- `cd search-apis` (For now we just have mock data for search in the future this may change)
 - `npm i`
 - `npm start` (if you need to a specify port set your env before running eg. `PORT=3000 npm start`)
 
