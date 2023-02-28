@@ -1,9 +1,10 @@
-# Mock search api
+# Mock api
 
-> Gives mock hard coded responses to certain search api endpoints
+> For now only mock hard coded responses to certain search api endpoints are held in this repository.  Later other mock responses can be held here.
 
 ## Getting started
 
+- `cd search-apis` (For now we just have mock data for search, in the future, this may change)
 - `npm i`
 - `npm start` (if you need to a specify port set your env before running eg. `PORT=3000 npm start`)
 
