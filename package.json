@@ -1,0 +1,27 @@
+{
+  "name": "@nice-digital/mock-apis",
+  "version": "1.0.0",
+  "description": "Monorepo for the NICE Digital mock APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nice-digital/mocks-apis.git"
+  },
+  "author": "NICE Digital (https://www.nice.org.uk/digital)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nice-digital/mocks-apis/issues"
+  },
+  "homepage": "https://github.com/nice-digital/mocks-apis#readme",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
+  },
+  "volta": {
+    "node": "18.16.0"
+  }
+}
