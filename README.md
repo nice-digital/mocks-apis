@@ -23,7 +23,7 @@ should build the image `mock-search-api`.
 
 To run the container:
 
-`docker run --publish 3000:3000 --name=search-api -d mock-search-api`
+`docker run --publish 80:80 --name=search-api -d mock-search-api`
 
 Now you should be able to go to any of these links:
 
