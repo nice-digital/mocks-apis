@@ -61,6 +61,25 @@ The available endpoints will then be:
 
 See the [publications/data](publications/data) folder for which products are supported.
 
+### Indev
+
+Build the docker image with:
+
+```
+docker build https://github.com/nice-digital/mocks-apis.git#main:indev -t mock-indev
+```
+
+Then run it with:
+
+`docker run --publish 80:80 --name=mock-indev -d mock-indev`
+
+The available endpoints will then be:
+
+- http://localhost:3000/feeds/project/gid-ind10272 (single Indicator project)
+- http://localhost:3000/feeds/project/gid-hub10001 (single Hub project)
+
+See the [indev/data](indev/data) folder for which products are supported.
+
 ## Docker compose
 
 Consume one of the mock services (e.g. SSE) in Docker compose like this:
