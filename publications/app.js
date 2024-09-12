@@ -25,6 +25,17 @@ app.get("/feeds/*", async (req, res, next) => {
   });
 });
 
+app.get("/newfeeds/*", async (req, res, next) => {
+  const p = path.join(dataDirectory, req.path + ".json");
+
+  return res.sendFile(p, (err, data) => {
+    if(err) {
+      console.error(`File at ${req.path} not found`);
+      return res.status(404).send(`File at ${req.path} not found`).end()
+    }
+  });
+});
+
 // 404 handler
 app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!");
